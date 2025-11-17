@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Case Studies | Maulik</title>
+
+  <!-- shared styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- shared JS -->
+  <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+  <!-- global background -->
+  <div class="bg-grid"></div>
+
+  <!-- HEADER (same as index) -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Maulik Rakesh Rajput</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="projects.html" class="is-active">Projects</a></li>
+        <li><a href="index.html#timeline">Journey</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="scroll-progress"></div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="proj-feed-page">
+    <!-- Header -->
+    <section class="proj-feed-header" data-reveal>
+      <h1>Projects &amp; Experience</h1>
+      <p>
+        This page includes all the research and project work along with experiences. Each entry links to a detailed page with
+        full write-up, CAD, reports, and supporting media.
+      </p>
+    </section>
+
+    <!-- Case study feed -->
+    <section class="proj-feed-list" aria-label="Project case studies" data-reveal>
+
+      <!-- 1. Volvo PDU -->
+      <article class="proj-feed-item" data-href="projects/volvo-pdu.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/volvo-pdu-thumb.png" alt="Volvo PDU project thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>Busbar Fixation for Commercial EV’s PDU – Volvo Trucks</h2>
+          <p>
+            Master’s thesis on developing new fixation concepts for high-voltage busbars in Volvo’s traction
+            voltage PDU to improve mechanical robustness, electrical/thermal safety, and assembly efficiency.
+          </p>
+          <p class="proj-feed-meta">Electromobility · PTC Creo · ANSYS Mechanical · Granta · Windchill</p>
+          <a href="projects/volvo-pdu.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+      <!-- 2. Chalmers Formula Student -->
+      <article class="proj-feed-item" data-href="projects/formula-student.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/formula-thumb.png" alt="Formula Student chassis thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>Chalmers Formula Student – Chassis &amp; Ergonomics</h2>
+          <p>
+            Designed and manufactured a carbon fiber monocoque and safety structures for Freja (2024),
+            enabling integration of EV and Driverless subsystems and compliance with Formula Student rules.
+          </p>
+          <p class="proj-feed-meta">Motorsport · Siemens NX · ANSYS · CATIA V5 · Teamcenter</p>
+          <a href="projects/formula-student.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+      <!-- 3. DJS Miles -->
+      <article class="proj-feed-item" data-href="projects/djs-miles.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/miles.png" alt="DJS Miles thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>DJS Miles – Shell Eco-Marathon</h2>
+          <p>
+            Co-founded and led an electric supermileage team; designed a teardrop CFRP monocoque and steering
+            system for a 3-wheeled EV and secured multiple off-track awards.
+          </p>
+          <p class="proj-feed-meta">Student motorsport · Fusion 360 · SolidWorks · ANSYS</p>
+          <a href="projects/djs-miles.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+      <!-- 4. Volvo Motion Control -->
+      <article class="proj-feed-item" data-href="projects/volvo-motion-control.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/summer work.png" alt="Volvo motion control thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>Vehicle Dynamics &amp; Motion Control – Volvo Group Trucks Technology</h2>
+          <p>
+            Developed kinematic control logic for long combination vehicles (LCVs) to estimate trailer pose and
+            mitigate off-tracking/jackknifing using limited ISO 11992 signal availability.
+          </p>
+          <p class="proj-feed-meta">Vehicle Dynamics · MATLAB · Simulink · Volvo VTM</p>
+          <a href="projects/volvo-motion-control.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+      <!-- 5. Energy Simulation -->
+      <article class="proj-feed-item" data-href="projects/energy-sim.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/energy-sim-thumb.png" alt="Energy simulation thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>Energy Performance Simulation of Heavy-Duty BEV and ICE Trucks</h2>
+          <p>
+            Built a MATLAB–Simulink forward simulation model to compare the energy and cost performance of
+            BEV vs ICE trucks on real Swedish freight routes together with Volvo GTT and ReVeRe.
+          </p>
+          <p class="proj-feed-meta">Simulation · MATLAB · Simulink · Excel</p>
+          <a href="projects/energy-sim.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+      <!-- 6. FSI -->
+      <article class="proj-feed-item" data-href="projects/fsi-wing.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/fsi-wing-thumb.png" alt="FSI rear wing thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>FSI Analysis of a Formula Student Rear Wing</h2>
+          <p>
+            Performed one-way CFD → FEA coupling to validate deformation, stress, and safety of a CFRP rear wing
+            under aerodynamic loads.
+          </p>
+          <p class="proj-feed-meta">CFD/FEA · STAR-CCM+ · ANSYS Fluent/Mechanical/ACP</p>
+          <a href="projects/fsi-wing.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+      <!-- 7. Teaching Assistant -->
+      <article class="proj-feed-item" data-href="projects/teaching-assistant.html">
+        <div class="proj-feed-media">
+          <img src="assets/img/teaching-thumb.png" alt="Teaching / CASTER thumbnail">
+        </div>
+        <div class="proj-feed-body">
+          <h2>Teaching Assistant &amp; Lab Instructor – Chalmers University</h2>
+          <p>
+            Supported graduate courses in Vehicle Motion Engineering and Road Vehicle Aerodynamics using the
+            CASTER full-scale driving simulator and MATLAB/Simulink-based labs.
+          </p>
+          <p class="proj-feed-meta">Teaching · MATLAB/Simulink · CASTER</p>
+          <a href="projects/teaching-assistant.html" class="proj-feed-link">View case study</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Maulik. All rights reserved.</p>
+  </footer>
+
+  <!-- Custom cursor elements (same as index) -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+</body>
+</html>

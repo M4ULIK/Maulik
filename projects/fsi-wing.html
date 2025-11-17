@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSI Analysis of a Formula Student Rear Wing | Maulik</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <!-- shared header -->
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Maulik</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#hero">Home</a></li>
+        <li><a href="../projects.html" class="active">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="proj-docs-page">
+    <div class="proj-docs-shell">
+      <!-- LEFT NAV -->
+      <aside class="proj-docs-nav">
+        <div class="proj-docs-title">FSI Analysis of a Formula Student Rear Wing</div>
+        <nav>
+          <a href="#overview" class="proj-docs-link">Overview</a>
+          <a href="#background" class="proj-docs-link">Background</a>
+          <a href="#objective" class="proj-docs-link">Objective</a>
+          <a href="#approach" class="proj-docs-link">Methodology</a>
+          <a href="#results" class="proj-docs-link">Results & Insights</a>
+          <a href="#tools" class="proj-docs-link">Tools & Technologies</a>
+          <a href="#media" class="proj-docs-link">Media & Downloads</a>
+        </nav>
+        <div class="proj-docs-meta">
+          <p><strong>Domain:</strong> Aerodynamics & Structural Analysis</p>
+          <p><strong>Focus:</strong> CFD → FEA coupling (FSI)</p>
+          <p><strong>Application:</strong> Formula Student rear wing</p>
+        </div>
+      </aside>
+
+      <!-- RIGHT CONTENT -->
+      <section class="proj-docs-content">
+        <!-- MAIN HEADING -->
+        <article id="overview" class="proj-docs-section">
+          <h1>FSI Analysis of a Formula Student Rear Wing</h1>
+          <p class="proj-docs-lead">
+            Conducted a Fluid-Structure Interaction (FSI) study on a Formula Student rear wing assembly to assess deformation, stress distribution, and safety under aerodynamic loads.
+            The analysis integrated CFD and FEA simulations to validate the carbon fiber structure and ensure aerodynamic efficiency was maintained under load.
+          </p>
+          <p class="proj-docs-lead">
+            The goal was to understand how aerodynamic pressures affect composite deflection and identify necessary structural reinforcements.
+          </p>
+        </article>
+
+        <!-- VISUAL STRIP -->
+        <div class="proj-docs-visual">
+          <div class="proj-docs-visual-main">
+            <h2>Rear Wing FSI setup</h2>
+            <p>Include CFD flow visualization and stress/deflection contour plots here.</p>
+            <div class="proj-docs-visual-placeholder">CFD → FEA IMAGE PLACEHOLDER</div>
+          </div>
+          <div class="proj-docs-visual-side">
+            <div class="proj-docs-visual-card">
+              <h3>Simulation clips</h3>
+              <p>Short CFD animation or deformation result.</p>
+              <div class="proj-docs-visual-sm">VIDEO PLACEHOLDER</div>
+            </div>
+            <div class="proj-docs-visual-card">
+              <h3>Key files</h3>
+              <ul>
+                <li><a href="#">CFD pressure map (CSV)</a></li>
+                <li><a href="#">FEA model (Workbench)</a></li>
+                <li><a href="#">Post-processing report (PDF)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background -->
+        <article id="background" class="proj-docs-section">
+          <h2>Background</h2>
+          <p>
+            In Formula Student, rear wings generate substantial downforce but can experience structural deflection that alters aerodynamic performance.
+            The analysis aimed to couple the aerodynamic loads from CFD with structural deformation analysis through a one-way FSI workflow.
+          </p>
+          <p>
+            The wing was designed from CFRP using a multi-element airfoil configuration, and the study ensured it could withstand event-specific load conditions without excessive deformation.
+          </p>
+        </article>
+
+        <!-- Objective -->
+        <article id="objective" class="proj-docs-section">
+          <h2>Objective</h2>
+          <ul>
+            <li>Quantify structural deformation of the rear wing under aerodynamic loading.</li>
+            <li>Validate the carbon fiber layup using FEA simulations.</li>
+            <li>Identify areas of stress concentration and possible weight reduction.</li>
+            <li>Ensure aerodynamic efficiency is not compromised by flexibility.</li>
+          </ul>
+        </article>
+
+        <!-- Approach -->
+        <article id="approach" class="proj-docs-section">
+          <h2>Methodology</h2>
+          <ol>
+            <li><strong>CFD simulation:</strong> Conducted steady-state aerodynamic analysis using <strong>STAR-CCM+</strong> to obtain pressure distributions.</li>
+            <li><strong>Pressure transfer:</strong> Exported CFD pressure maps to <strong>ANSYS Workbench</strong> for structural analysis.</li>
+            <li><strong>FEA model:</strong> Created composite shell model of the rear wing in ANSYS Mechanical using material data from CFRP laminates.</li>
+            <li><strong>FSI coupling:</strong> Applied CFD pressures as surface loads to perform one-way FSI coupling.</li>
+            <li><strong>Validation:</strong> Compared deformation and stress levels to permissible composite limits.</li>
+          </ol>
+          <p>
+            The coupling allowed for a realistic representation of aerodynamic-structural interaction without the computational cost of full transient FSI.
+          </p>
+        </article>
+
+        <!-- Results -->
+        <article id="results" class="proj-docs-section">
+          <h2>Results & Insights</h2>
+          <ul>
+            <li>Maximum deformation observed at midspan of the main element; within safe design limits.</li>
+            <li>Composite layup provided adequate stiffness under operating loads.</li>
+            <li>Stress concentrations identified near endplates — improved by adding local reinforcement.</li>
+            <li>Verified the aerodynamic surface deflection did not significantly alter downforce.</li>
+          </ul>
+          <p>
+            The analysis improved understanding of real-world load behavior and helped refine future CFRP aero component designs.
+          </p>
+        </article>
+
+        <!-- Tools -->
+        <article id="tools" class="proj-docs-section">
+          <h2>Tools & Technologies</h2>
+          <ul>
+            <li><strong>STAR-CCM+</strong> – CFD simulation and pressure extraction.</li>
+            <li><strong>ANSYS Workbench (Mechanical / ACP)</strong> – structural analysis and composite layup simulation.</li>
+            <li><strong>CATIA V5</strong> – CAD model of the rear wing geometry.</li>
+            <li><strong>MATLAB / Excel</strong> – data processing and validation plots.</li>
+          </ul>
+        </article>
+
+        <!-- Media -->
+        <article id="media" class="proj-docs-section">
+          <h2>Media & Downloads</h2>
+          <div class="proj-docs-media-grid">
+            <div class="proj-docs-media-box">
+              <h3>CFD / FEA images</h3>
+              <div class="proj-docs-media-placeholder">CFD PRESSURE + FEA DEFLECTION</div>
+            </div>
+            <div class="proj-docs-media-box">
+              <h3>Documents</h3>
+              <ul>
+                <li><a href="#">Analysis report (PDF)</a></li>
+                <li><a href="#">ANSYS setup files</a></li>
+                <li><a href="#">Wing geometry (STEP)</a></li>
+              </ul>
+            </div>
+            <div class="proj-docs-media-box">
+              <h3>Videos</h3>
+              <p>Simulation clips / deformation animation.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-docs-section">
+          <a href="../projects.html" class="proj-docs-back">← Back to all projects</a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Maulik. All rights reserved.</p>
+  </footer>
+</body>
+</html>
