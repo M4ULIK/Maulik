@@ -4,190 +4,278 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Energy Performance Simulation of Heavy-Duty BEV and ICE Trucks | Maulik</title>
+
+  <!-- shared styles / fonts / scripts (same as index + projects) -->
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <script defer src="../assets/js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="../assets/js/script.js"></script>
 </head>
 <body>
+  <!-- global background -->
+  <div class="bg-grid"></div>
+
   <!-- shared header -->
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <a href="../index.html" class="logo">Maulik</a>
+      <a href="../index.html" class="logo">Maulik Rakesh Rajput</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="../index.html#hero">Home</a></li>
-        <li><a href="../projects.html" class="active">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#timeline">Journey</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
+    <div class="scroll-progress"></div>
   </header>
 
   <main class="proj-docs-page">
-    <div class="proj-docs-shell">
+    <div class="proj-docs-shell" data-reveal>
       <!-- LEFT NAV -->
-      <aside class="proj-docs-nav">
-        <div class="proj-docs-title">Energy Performance Simulation – HD BEV vs ICE</div>
+      <aside class="proj-docs-nav" data-reveal>
+        <div class="proj-docs-title">
+          Energy Performance Simulation – BEV vs ICE
+        </div>
         <nav>
-          <a href="#overview" class="proj-docs-link">Overview</a>
-          <a href="#background" class="proj-docs-link">Background</a>
-          <a href="#objective" class="proj-docs-link">Objective</a>
-          <a href="#method" class="proj-docs-link">Simulation Method</a>
-          <a href="#routes" class="proj-docs-link">Route & Data</a>
-          <a href="#results" class="proj-docs-link">Results & Insights</a>
-          <a href="#tools" class="proj-docs-link">Tools & Tech</a>
-          <a href="#media" class="proj-docs-link">Media & Downloads</a>
+          <a href="#overview"   class="proj-docs-link">Overview / Context</a>
+          <a href="#problem"    class="proj-docs-link">Problem Statement</a>
+          <a href="#role"       class="proj-docs-link">Role &amp; Responsibilities</a>
+          <a href="#approach"   class="proj-docs-link">Approach</a>
+          <a href="#results"    class="proj-docs-link">Key Results &amp; Outcomes</a>
+          <a href="#tools"      class="proj-docs-link">Tools &amp; Technologies</a>
+          <a href="#learnings"  class="proj-docs-link">Learnings &amp; Impact</a>
         </nav>
         <div class="proj-docs-meta">
-          <p><strong>Collab:</strong> Volvo GTT & ReVeRe</p>
+          <p><strong>Collab:</strong> Volvo GTT &amp; ReVeRe</p>
           <p><strong>Domain:</strong> Freight electrification</p>
-          <p><strong>Scope:</strong> Energy & cost performance</p>
+          <p><strong>Scope:</strong> Energy &amp; cost performance</p>
           <p><strong>Location:</strong> Sweden</p>
         </div>
       </aside>
 
       <!-- RIGHT CONTENT -->
       <section class="proj-docs-content">
-        <!-- MAIN HEADING -->
-        <article id="overview" class="proj-docs-section">
-          <h1>Energy Performance Simulation of Heavy-Duty BEV and ICE Trucks</h1>
+        <!-- HERO TITLE CARD -->
+        <article id="heading" class="proj-docs-section proj-docs-section--hero" data-reveal>
+          <h1>
+            Energy Performance Simulation of Heavy-Duty BEV and ICE Trucks<br />
+            <span class="proj-docs-subtitle">Volvo GTT · ReVeRe · Freight Electrification</span>
+          </h1>
           <p class="proj-docs-lead">
-            Developed a forward vehicle simulation framework in MATLAB/Simulink to evaluate the energy and cost performance of heavy-duty battery-electric (BEV) and
-            internal combustion engine (ICE) freight vehicles operating on real Swedish transport routes.
+            Forward vehicle simulation of heavy-duty BEV and ICE trucks on real Swedish freight routes,
+            focusing on <span class="keyword">energy performance</span>,
+            <span class="keyword">route feasibility</span>, and
+            <span class="keyword">operational cost</span> for freight electrification.
           </p>
-          <p class="proj-docs-lead">
-            The work supported ongoing research on freight electrification strategies for Volvo Group Trucks Technology (GTT) and ReVeRe.
-          </p>
-        </article>
-
-        <!-- VISUAL STRIP -->
-        <div class="proj-docs-visual">
-          <div class="proj-docs-visual-main">
-            <h2>Simulation / route visualization</h2>
-            <p>Use for MATLAB plots: speed vs time, SoC vs distance, elevation profile.</p>
-            <div class="proj-docs-visual-placeholder">SIMULATION PLOTS / ROUTE PROFILE</div>
-          </div>
-          <div class="proj-docs-visual-side">
-            <div class="proj-docs-visual-card">
-              <h3>Demo / run video</h3>
-              <p>Short screen recording of the Simulink model or results dashboard.</p>
-              <div class="proj-docs-visual-sm">SIMULINK VIDEO</div>
-            </div>
-            <div class="proj-docs-visual-card">
-              <h3>Key documents</h3>
-              <ul>
-                <li><a href="#">Simulation report (PDF)</a></li>
-                <li><a href="#">Route dataset (CSV)</a></li>
-                <li><a href="#">Model description</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Background -->
-        <article id="background" class="proj-docs-section">
-          <h2>Background</h2>
-          <p>
-            Electrifying heavy-duty freight transport is challenging because energy demand depends strongly on route profile, payload, speed profile, and environmental conditions.
-            Operators need to understand whether a BEV truck can complete a given route, what the energy cost will be, and how it compares to an equivalent ICE truck.
-          </p>
-          <p>
-            The project set out to create a simulation environment where different powertrain concepts could be tested on <strong>real operating routes</strong> used by Volvo GTT and ReVeRe.
-          </p>
-        </article>
-
-        <!-- Objective -->
-        <article id="objective" class="proj-docs-section">
-          <h2>Objective</h2>
-          <ul>
-            <li>Build a forward vehicle simulation model for HD trucks.</li>
-            <li>Simulate both BEV and ICE powertrains under comparable conditions.</li>
-            <li>Use real Swedish freight routes (topology, speed limits, distance).</li>
-            <li>Compare energy consumption and cost implications.</li>
-            <li>Provide a tool to support freight electrification decision-making.</li>
+          <ul class="proj-docs-tags">
+            <li>Forward vehicle modelling</li>
+            <li>Driver behaviour · MATLAB / Simulink</li>
+            <li>Heavy-duty BEV vs ICE</li>
           </ul>
         </article>
 
-        <!-- Simulation Method -->
-        <article id="method" class="proj-docs-section">
-          <h2>Simulation Method</h2>
-          <p>
-            A forward-facing vehicle model was implemented in MATLAB/Simulink, where driver demand and route conditions are inputs, and the model computes tractive effort,
-            powertrain operation, and resulting energy use.
-          </p>
-          <ol>
-            <li><strong>Vehicle model:</strong> modelled longitudinal dynamics of HD vehicles (mass, rolling resistance, aero drag, road grade).</li>
-            <li><strong>Powertrain model:</strong> separate branches for BEV (motor + battery + efficiency maps) and ICE (engine + gearbox + fuel maps).</li>
-            <li><strong>Driver / speed profile:</strong> tracked the target speed from route data.</li>
-            <li><strong>Environment:</strong> included effects of road topology and possibly ambient conditions.</li>
-            <li><strong>Post-processing:</strong> energy/fuel use aggregated per trip for cost comparison.</li>
-          </ol>
-          <p>
-            The structure allowed swapping powertrains while keeping the same route and mission profile.
+
+
+          <!-- 🔹 Thesis link row BETWEEN hero and carousel -->
+  <div class="proj-docs-report-row">
+    <a
+      href="https://odr.chalmers.se/items/47aa205f-a9fa-4c55-81c4-a1e091621344"   
+      target="_blank"
+      rel="noopener"
+      class="proj-docs-report-link"
+    >
+      View full report on Chalmers repository ↗
+    </a>
+  </div>
+
+
+
+
+<!-- VISUAL STRIP: SIMPLE CAROUSEL -->
+<div class="proj-carousel">
+
+  <!-- slide 1 -->
+  <figure class="proj-slide is-active">
+    <img src="../assets/img/energy 1.png" alt="Main concept CAD visualization">
+    <figcaption>Top level of the forward simulation model</figcaption>
+  </figure>
+
+  <!-- slide 1 -->
+  <figure class="proj-slide is-active">
+    <img src="../assets/img/energy 2-01.png" alt="Main concept CAD visualization">
+    <figcaption>Energy Consumption results according to the seasons</figcaption>
+  </figure>
+
+
+  <!-- slide 1 -->
+  <figure class="proj-slide is-active">
+    <img src="../assets/img/energy 3.png" alt="Main concept CAD visualization">
+    <figcaption>BEV results for energy consumption per km</figcaption>
+  </figure>
+
+  <!-- arrows -->
+  <div class="proj-carousel-arrow left" data-dir="prev">❮</div>
+  <div class="proj-carousel-arrow right" data-dir="next">❯</div>
+
+  <!-- dots -->
+  <div class="proj-carousel-dots"></div>
+</div>
+
+
+        <!-- 1. OVERVIEW / CONTEXT -->
+        <article id="overview" class="proj-docs-section" data-reveal>
+          <h2>Project Overview</h2>
+          <p class="proj-docs-text">
+            This project focused on developing a <span class="keyword">forward vehicle simulation framework</span>
+            to assess the <span class="keyword">energy</span> and
+            <span class="keyword">cost performance</span> of heavy-duty
+            <span class="keyword">battery-electric (BEV)</span> and
+            <span class="keyword">internal combustion engine (ICE)</span> freight vehicles operating over
+            <span class="keyword">real transport routes in Sweden</span>.
+            The work was conducted in collaboration with
+            <span class="keyword">Volvo Group Trucks Technology (GTT)</span> and
+            <span class="keyword">ReVeRe</span> to support ongoing research on
+            <span class="keyword">freight electrification strategies</span>.
           </p>
         </article>
 
-        <!-- Route & Data -->
-        <article id="routes" class="proj-docs-section">
-          <h2>Route & Data</h2>
-          <p>
-            The model used <strong>Volvo GTT freight route data from Sweden</strong> to reflect actual operating conditions (distance, elevation, speed limits).
-            This was important to assess BEV feasibility on specific transport corridors.
+        <!-- 2. PROBLEM STATEMENT -->
+        <article id="problem" class="proj-docs-section" data-reveal>
+          <h2>Problem Statement</h2>
+          <p class="proj-docs-text">
+            Electrification of <span class="keyword">heavy-duty freight transport</span> presents challenges
+            related to <span class="keyword">energy demand</span>,
+            <span class="keyword">route feasibility</span>, and
+            <span class="keyword">cost optimization</span>.
+            The goal was to simulate <span class="keyword">real-world operating conditions</span>—including
+            <span class="keyword">road topology</span>, environmental effects, and
+            <span class="keyword">driver behavior</span>—to determine the
+            <span class="keyword">energy cost differences</span> and
+            <span class="keyword">operational viability</span> between ICE and BEV powertrains.
           </p>
-          <ul>
-            <li>Realistic distance and road grade.</li>
-            <li>Speed and stop patterns as per route.</li>
-            <li>Used for both BEV and ICE cases for apples-to-apples comparison.</li>
+        </article>
+
+        <!-- 3. ROLE & RESPONSIBILITIES -->
+        <article id="role" class="proj-docs-section" data-reveal>
+          <h2>My Role &amp; Responsibilities</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Developed the <span class="keyword">Driver Model</span> that adapts
+              <span class="keyword">acceleration</span>, <span class="keyword">braking</span>,
+              and <span class="keyword">speed control</span> based on environmental factors such as
+              <span class="keyword">road slope</span>, curvature, and traffic density.
+            </li>
+            <li>
+              Implemented decision logic to reflect realistic driving strategies for both
+              <span class="keyword">BEV</span> and <span class="keyword">ICE</span> powertrains within the
+              forward simulation framework.
+            </li>
+            <li>
+              Collaborated with <span class="keyword">Volvo GTT</span> and
+              <span class="keyword">ReVeRe</span> to validate environmental inputs and driver responses for
+              alignment with <span class="keyword">real operational data</span>.
+            </li>
+            <li>
+              Assisted in setting up and post-processing the
+              <span class="keyword">MATLAB / Simulink</span> framework, including environment and vehicle
+              subsystems, to enable full <span class="keyword">route-based energy simulations</span>.
+            </li>
           </ul>
         </article>
 
-        <!-- Results -->
-        <article id="results" class="proj-docs-section">
-          <h2>Results & Insights</h2>
-          <ul>
-            <li>Energy consumption for BEV could be quantified per route and compared to ICE fuel consumption.</li>
-            <li>Cost performance (energy price vs fuel price) could be assessed for Swedish conditions.</li>
-            <li>Model highlighted routes where BEV range or charging might become a constraint.</li>
-            <li>Showed the value of using real route data instead of generic drive cycles.</li>
+        <!-- 4. APPROACH -->
+        <article id="approach" class="proj-docs-section" data-reveal>
+          <h2>Approach</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Integrated the <span class="keyword">Driver</span> subsystem into the simulation,
+              ensuring compatibility with <span class="keyword">vehicle</span> and
+              <span class="keyword">environment</span> models.
+            </li>
+            <li>
+              Designed the <span class="keyword">driver control algorithm</span> to modulate throttle
+              and brake inputs dynamically in response to <span class="keyword">topography</span> and
+              <span class="keyword">traffic</span> inputs.
+            </li>
+            <li>
+              Supported the simulation of the
+              <span class="keyword">Gothenburg–Viared</span> freight route, using real gradient and
+              weather profiles provided by project partners.
+            </li>
+            <li>
+              Post-processed results using <span class="keyword">MATLAB</span> scripts to extract
+              <span class="keyword">vehicle power demand</span>,
+              <span class="keyword">fuel / energy consumption</span>, and
+              <span class="keyword">operating cost</span> across all simulated trips.
+            </li>
+            <li>
+              Iteratively refined control parameters based on performance feedback from
+              professors and <span class="keyword">Volvo engineers</span>.
+            </li>
           </ul>
-          <p>
-            These results can support planning of BEV deployment, charging strategy, and TCO analysis in heavy-duty applications.
-          </p>
         </article>
 
-        <!-- Tools -->
-        <article id="tools" class="proj-docs-section">
-          <h2>Tools & Technologies</h2>
-          <ul>
-            <li><strong>MATLAB</strong> – model logic and data processing.</li>
-            <li><strong>Simulink</strong> – forward vehicle simulation environment.</li>
-            <li><strong>Excel</strong> – post-processing and comparison tables.</li>
-            <li><strong>Volvo GTT route data</strong> – real transport routes in Sweden.</li>
+        <!-- 5. KEY RESULTS & OUTCOMES -->
+        <article id="results" class="proj-docs-section" data-reveal>
+          <h2>Key Results &amp; Outcomes</h2>
+          <ul class="proj-docs-list">
+            <li>
+              The <span class="keyword">battery-electric vehicle (BEV)</span> demonstrated
+              <span class="keyword">25–45% higher energy efficiency</span> and roughly
+              <span class="keyword">20% lower operational energy cost</span> compared to the ICE configuration.
+            </li>
+            <li>
+              The model confirmed that a <span class="keyword">single charging station</span> at
+              <span class="keyword">Gothenburg Harbor</span> was sufficient for daily freight operations
+              under the simulated use cases.
+            </li>
+            <li>
+              The <span class="keyword">driver model</span> successfully emulated realistic adaptive
+              behavior, aligning with recorded operational data from Volvo.
+            </li>
+            <li>
+              Delivered a validated <span class="keyword">simulation platform</span> for future studies in
+              <span class="keyword">route optimization</span>,
+              <span class="keyword">driver strategy design</span>, and
+              <span class="keyword">freight energy forecasting</span>.
+            </li>
           </ul>
         </article>
 
-        <!-- Media -->
-        <article id="media" class="proj-docs-section">
-          <h2>Media & Downloads</h2>
-          <div class="proj-docs-media-grid">
-            <div class="proj-docs-media-box">
-              <h3>Simulation plots</h3>
-              <div class="proj-docs-media-placeholder">SoC / Fuel / Speed plot</div>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Documents</h3>
-              <ul>
-                <li><a href="#">Simulation report (PDF)</a></li>
-                <li><a href="#">Simulink model (export)</a></li>
-                <li><a href="#">Route dataset (CSV)</a></li>
-              </ul>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Notes</h3>
-              <p>Use for assumptions (mass, ambient, payload) and future scenarios.</p>
-            </div>
-          </div>
+        <!-- 6. TOOLS & TECHNOLOGIES -->
+        <article id="tools" class="proj-docs-section" data-reveal>
+          <h2>Tools &amp; Technologies</h2>
+          <ul class="proj-docs-list">
+            <li><span class="keyword">MATLAB</span> – post-processing and control logic support.</li>
+            <li><span class="keyword">Simulink</span> – forward model and driver-in-the-loop simulation.</li>
+            <li><span class="keyword">Excel</span> – result aggregation and scenario comparison.</li>
+            <li><span class="keyword">Volvo GTT freight route data</span> – real-world Swedish routes.</li>
+          </ul>
         </article>
 
-        <article class="proj-docs-section">
+        <!-- 7. LEARNINGS & IMPACT -->
+        <article id="learnings" class="proj-docs-section" data-reveal>
+          <h2>Learnings &amp; Impact</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Strengthened expertise in <span class="keyword">forward modelling and simulation</span>,
+              <span class="keyword">driver behavior algorithms</span>, and
+              <span class="keyword">energy optimization</span>.
+            </li>
+            <li>
+              Gained experience working with <span class="keyword">industrial partners</span> and translating
+              real operational requirements into simulation frameworks.
+            </li>
+            <li>
+              Contributed to research on <span class="keyword">sustainable heavy-vehicle transport</span>
+              and <span class="keyword">electrification feasibility</span>.
+            </li>
+          </ul>
+        </article>
+
+        <!-- BACK LINK -->
+        <article class="proj-docs-section proj-docs-back-wrap" data-reveal>
           <a href="../projects.html" class="proj-docs-back">← Back to all projects</a>
         </article>
       </section>
@@ -197,5 +285,9 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Maulik. All rights reserved.</p>
   </footer>
+
+  <!-- custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 </body>
 </html>

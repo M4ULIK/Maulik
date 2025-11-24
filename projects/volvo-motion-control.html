@@ -4,40 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vehicle Dynamics & Motion Control – Volvo GTT | Maulik</title>
+
+  <!-- shared styles / fonts / scripts (same as index + projects + PDU page) -->
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <script defer src="../assets/js/main.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <script defer src="../assets/js/script.js"></script>
 </head>
 <body>
+  <!-- global background -->
+  <div class="bg-grid"></div>
+
   <!-- shared header -->
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <a href="../index.html" class="logo">Maulik</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <a href="../index.html" class="logo">Maulik Rakesh Rajput</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="../index.html#hero">Home</a></li>
-        <li><a href="../projects.html" class="active">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#timeline">Journey</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
+    <div class="scroll-progress"></div>
   </header>
 
   <main class="proj-docs-page">
-    <div class="proj-docs-shell">
+    <div class="proj-docs-shell" data-reveal>
       <!-- LEFT NAV -->
-      <aside class="proj-docs-nav">
-        <div class="proj-docs-title">Vehicle Dynamics & Motion Control – Volvo GTT</div>
-        <nav>
-          <a href="#overview" class="proj-docs-link">Overview</a>
-          <a href="#background" class="proj-docs-link">Background</a>
-          <a href="#challenge" class="proj-docs-link">Problem / Challenge</a>
-          <a href="#approach" class="proj-docs-link">Control Approach</a>
-          <a href="#tools" class="proj-docs-link">Tools & Models</a>
-          <a href="#results" class="proj-docs-link">Results & Impact</a>
-          <a href="#media" class="proj-docs-link">Media & Downloads</a>
-        </nav>
+      <aside class="proj-docs-nav" data-reveal>
+        <div class="proj-docs-title">
+          Vehicle Dynamics & Motion Control – Volvo GTT
+        </div>
+
+<nav>
+  <a href="#overview"   class="proj-docs-link">Project Overview</a>
+  <a href="#problem"    class="proj-docs-link">Problem Statement</a>
+  <a href="#role"       class="proj-docs-link">Role & Responsibilities</a>
+  <a href="#approach"   class="proj-docs-link">Approach & Method</a>
+  <a href="#results"    class="proj-docs-link">Key Results & Outcomes</a>
+  <a href="#tools"      class="proj-docs-link">Tools & Technologies</a>
+  <a href="#learnings"  class="proj-docs-link">Learnings & Impact</a>
+</nav>
+
+
         <div class="proj-docs-meta">
           <p><strong>Org:</strong> Volvo Group Trucks Technology</p>
-          <p><strong>Domain:</strong> Vehicle Dynamics & Control</p>
+          <p><strong>Domain:</strong> Vehicle Dynamics &amp; Control</p>
           <p><strong>Application:</strong> Long Combination Vehicles (LCV)</p>
           <p><strong>Location:</strong> Gothenburg, Sweden</p>
         </div>
@@ -45,138 +66,211 @@
 
       <!-- RIGHT CONTENT -->
       <section class="proj-docs-content">
-        <!-- MAIN HEADING -->
-        <article id="overview" class="proj-docs-section">
-          <h1>Vehicle Dynamics & Motion Control – Volvo Group Trucks Technology</h1>
+        <!-- HERO TITLE CARD -->
+        <article id="heading" class="proj-docs-section proj-docs-section--hero" data-reveal>
+          <h1>
+            Vehicle Dynamics &amp; Motion Control<br />
+            <span class="proj-docs-subtitle">Volvo Group Trucks Technology · LCV Pose Estimation</span>
+          </h1>
+
           <p class="proj-docs-lead">
-            Development of a kinematic control logic for long combination vehicles (LCVs) to estimate the pose of trailing units and reduce off-tracking and jackknifing,
-            using limited signal availability over the ISO 11992 communication standard.
+            Development of a kinematic control logic for long combination vehicles (LCVs) to estimate
+            the pose of trailing units and reduce off-tracking and jackknifing, using limited signal
+            availability over the ISO 11992 communication standard.
           </p>
+
           <p class="proj-docs-lead">
-            The work supported Volvo’s research on safer and more maneuverable multi-unit commercial vehicles operating in constrained environments.
+            The work supported Volvo’s research on safer and more maneuverable multi-unit commercial
+            vehicles operating in constrained environments.
           </p>
-        </article>
 
-        <!-- VISUAL STRIP -->
-        <div class="proj-docs-visual">
-          <div class="proj-docs-visual-main">
-            <h2>Vehicle / Articulation diagram</h2>
-            <p>Placeholder for LCV schematic, articulation angles, or kinematic chain diagram.</p>
-            <div class="proj-docs-visual-placeholder">LCV / KINEMATIC MODEL IMAGE</div>
-          </div>
-          <div class="proj-docs-visual-side">
-            <div class="proj-docs-visual-card">
-              <h3>Simulation / animation</h3>
-              <p>Short clip of trailer pose estimation / off-tracking reduction.</p>
-              <div class="proj-docs-visual-sm">SIMULATION VIDEO</div>
-            </div>
-            <div class="proj-docs-visual-card">
-              <h3>Related files</h3>
-              <ul>
-                <li><a href="#">Control logic notes</a></li>
-                <li><a href="#">Signal list (ISO 11992)</a></li>
-                <li><a href="#">Validation report</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Background -->
-        <article id="background" class="proj-docs-section">
-          <h2>Background</h2>
-          <p>
-            Long combination vehicles (LCVs) and multi-unit trucks offer improved freight efficiency, but they are more prone to
-            <strong>off-tracking, tail swing, and jackknifing</strong>, especially at low speeds, in roundabouts, or during docking maneuvers.
-          </p>
-          <p>
-            Modern trucks communicate over standards such as <strong>ISO 11992</strong>, but the available signals from the trailer units can be limited or delayed.
-            This creates a challenge for estimating the pose (position and orientation) of the rear unit in real time and for applying corrective control actions.
-          </p>
-        </article>
-
-        <!-- Problem / challenge -->
-        <article id="challenge" class="proj-docs-section">
-          <h2>Problem / Challenge</h2>
-          <p>The project addressed two main issues:</p>
-          <ul>
-            <li>
-              <strong>Limited signal availability:</strong> not all trailer states (angles, yaw rate, articulation) are directly measured or sent over ISO 11992,
-              so the system must infer or estimate them.
-            </li>
-            <li>
-              <strong>Need for kinematic consistency:</strong> the pose of the trailing unit must be consistent with the mechanical connection and the geometry of the vehicle train.
-            </li>
-          </ul>
-          <p>
-            The control logic therefore needed to be <strong>robust to missing or delayed signals</strong> and able to reconstruct trailer pose from a minimal signal set.
-          </p>
-        </article>
-
-        <!-- Approach -->
-        <article id="approach" class="proj-docs-section">
-          <h2>Control Approach</h2>
-          <p>
-            The solution was based on a kinematic modelling approach for multi-unit vehicles, where the motion of the trailing unit is derived from the motion of the tractor
-            and the geometry of the articulation points.
-          </p>
-          <ol>
-            <li><strong>System definition:</strong> defined the vehicle train configuration, articulation points, and available ISO 11992 signals.</li>
-            <li><strong>Kinematic model:</strong> formulated vehicle-train kinematics to relate tractor motion to trailer pose.</li>
-            <li><strong>Signal handling:</strong> handled missing/limited signals from the trailer by using kinematic reconstruction.</li>
-            <li><strong>Control logic:</strong> implemented logic to reduce off-tracking and prevent large articulation angles.</li>
-            <li><strong>Simulation:</strong> tested the strategy in a vehicle-dynamics environment representative of Volvo tools.</li>
-          </ol>
-          <p>
-            This approach made it possible to estimate trailer position and heading in real time without requiring a full sensor suite on every trailer.
-          </p>
-        </article>
-
-        <!-- Tools -->
-        <article id="tools" class="proj-docs-section">
-          <h2>Tools & Models</h2>
-          <ul>
-            <li><strong>MATLAB / Simulink</strong> for control logic implementation and rapid prototyping.</li>
-            <li><strong>Vehicle-dynamics environment (Volvo)</strong> for multi-unit vehicle simulation and scenario testing.</li>
-            <li><strong>ISO 11992</strong> signal structure as a constraint for available data.</li>
-            <li>Supporting documentation prepared in standard Volvo formats.</li>
+          <ul class="proj-docs-tags">
+            <li>LCV kinematics</li>
+            <li>Position estimation</li>
+            <li>MATLAB · Simulink · Volvo VTM</li>
           </ul>
         </article>
 
-        <!-- Results -->
-        <article id="results" class="proj-docs-section">
-          <h2>Results & Impact</h2>
-          <ul>
-            <li>Demonstrated that trailer pose can be reconstructed from limited ISO 11992 signals using kinematic relations.</li>
-            <li>Enabled control actions aimed at reducing off-tracking and avoiding jackknifing in low-speed maneuvers.</li>
-            <li>Provided a basis for future integration into advanced driver assistance or automated yard operations.</li>
-            <li>Documented assumptions, limitations, and signal requirements for further development within Volvo GTT.</li>
-          </ul>
-        </article>
+        <!-- VISUAL STRIP (kept as static cards for now) -->
+<!-- VISUAL STRIP: SIMPLE CAROUSEL -->
+<div class="proj-carousel">
 
-        <!-- Media -->
-        <article id="media" class="proj-docs-section">
-          <h2>Media & Downloads</h2>
-          <div class="proj-docs-media-grid">
-            <div class="proj-docs-media-box">
-              <h3>Vehicle / kinematic images</h3>
-              <div class="proj-docs-media-placeholder">LCV / KINEMATIC IMAGE</div>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Documents</h3>
-              <ul>
-                <li><a href="#">Control algorithm description</a></li>
-                <li><a href="#">Signal mapping (ISO 11992)</a></li>
-                <li><a href="#">Simulation test cases</a></li>
-              </ul>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Notes</h3>
-              <p>Use this for model assumptions, future work, or integration notes.</p>
-            </div>
-          </div>
-        </article>
+  <!-- slide 1 -->
+  <figure class="proj-slide is-active">
+    <img src="../assets/img/summer work.png" alt="Main concept CAD visualization">
+    <figcaption>Position simulation snippet showcasing off-tracking</figcaption>
+  </figure>
 
-        <article class="proj-docs-section">
+
+
+
+
+
+
+
+  <!-- arrows -->
+  <div class="proj-carousel-arrow left" data-dir="prev">❮</div>
+  <div class="proj-carousel-arrow right" data-dir="next">❯</div>
+
+  <!-- dots -->
+  <div class="proj-carousel-dots"></div>
+</div>
+
+
+        <!-- 1. Overview / Context -->
+<article id="overview" class="proj-docs-section" data-reveal>
+  <h2>Project Overview </h2>
+  <p class="proj-docs-text">
+    This internship was part of Volvo’s long-term research into improving the safety and maneuverability
+    of <span class="keyword">Long Combination Vehicles (LCVs)</span>, such as
+    <span class="keyword">A-double truck configurations</span>. The project focused on developing a
+    <span class="keyword">control logic</span> to mitigate
+    <span class="keyword">off-tracking</span> and prevent
+    <span class="keyword">jackknifing</span>, both critical challenges in heavy multi-trailer operations.
+  </p>
+</article>
+
+<!-- 2. Problem Statement -->
+<article id="problem" class="proj-docs-section" data-reveal>
+  <h2>Problem Statement</h2>
+  <p class="proj-docs-text">
+    LCVs face severe stability and control issues during complex maneuvers, particularly
+    <span class="keyword">reversing</span>, due to limited sensors on trailing units. The challenge was to
+    estimate the <span class="keyword">position and orientation</span> of all trailing units using only
+    <span class="keyword">truck-mounted IMU</span> and
+    <span class="keyword">ISO 11992-2/3</span> signals, enabling safe real-time control without additional
+    hardware.
+  </p>
+</article>
+
+<!-- 3. My Role & Responsibilities -->
+<article id="role" class="proj-docs-section" data-reveal>
+  <h2>My Role &amp; Responsibilities</h2>
+  <ul class="proj-docs-list">
+    <li>
+      Developed a <span class="keyword">kinematic model–based control logic</span> to estimate the
+      <span class="keyword">position, slope, and articulation angles</span> of trailing units in real time,
+      despite sensor limitations.
+    </li>
+    <li>
+      Designed a <span class="keyword">trajectory memory system</span> that stored
+      <span class="keyword">100&nbsp;m of vehicle path data</span>, enabling accurate reversing and reducing
+      jackknifing risk.
+    </li>
+    <li>
+      Investigated usage of <span class="keyword">ISO 11992-2/3</span> signals and identified the need for
+      additional signals to support advanced motion control.
+    </li>
+    <li>
+      Worked under a <span class="keyword">lumped mass model</span> assumption with
+      <span class="keyword">all-wheel steered and powered axles</span> as a future implementation scenario.
+    </li>
+  </ul>
+</article>
+
+<!-- 4. Approach / Process -->
+<article id="approach" class="proj-docs-section" data-reveal>
+  <h2>Approach & Methods</h2>
+  <ul class="proj-docs-list">
+    <li>
+      <span class="keyword">Vehicle modelling:</span> Modelled the A-double vehicle combination using
+      <span class="keyword">vehicle dynamics</span> and <span class="keyword">LCV kinematics</span>.
+    </li>
+    <li>
+      <span class="keyword">State estimation:</span> Implemented logic for real-time
+      <span class="keyword">X–Y coordinate</span> and <span class="keyword">slope estimation</span> of each
+      unit relative to the lead truck.
+    </li>
+    <li>
+      <span class="keyword">Control logic:</span> Implemented longitudinal and yaw control logic in
+      <span class="keyword">MATLAB/Simulink</span> as a future extension of the model.
+    </li>
+    <li>
+      <span class="keyword">Model validation:</span> Validated the model by:
+      <ul class="proj-docs-list nested">
+        <li>
+          Comparing predictions with real-world <span class="keyword">CAN signal data</span> at various
+          angles and velocities.
+        </li>
+        <li>
+          Benchmarking against Volvo’s in-house simulation tool
+          <span class="keyword">VTM</span> with track-based test scenarios.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span class="keyword">Off-tracking analysis:</span> Developed visualizations of tractor and trailer
+      paths to calculate <span class="keyword">off-tracking distances</span>, providing insights for
+      correction values in steering and velocity control.
+    </li>
+  </ul>
+</article>
+
+<!-- 5. Key Results & Outcomes -->
+<article id="results" class="proj-docs-section" data-reveal>
+  <h2>Key Results &amp; Outcomes</h2>
+  <ul class="proj-docs-list">
+    <li>
+      Built a working real-time <span class="keyword">kinematic control logic</span> capable of tracking
+      trailing unit positions without requiring onboard IMUs.
+    </li>
+    <li>
+      Delivered a <span class="keyword">trajectory memory–based reversal strategy</span> to minimize
+      jackknifing during reversing.
+    </li>
+    <li>
+      Identified critical <span class="keyword">signal limitations</span> in
+      <span class="keyword">ISO 11992-2/3</span>, and recommended extensions for future LCV motion control
+      systems.
+    </li>
+    <li>
+      Delivered tools for visualizing <span class="keyword">articulation</span> and
+      <span class="keyword">off-tracking</span>, aiding the design of corrective control strategies.
+    </li>
+  </ul>
+</article>
+
+<!-- 6. Tools & Technologies -->
+<article id="tools" class="proj-docs-section" data-reveal>
+  <h2>Tools &amp; Technologies</h2>
+  <ul class="proj-docs-list">
+    <li><span class="keyword">MATLAB &amp; Simulink</span></li>
+    <li>
+      <span class="keyword">Vehicle dynamics modelling</span> – LCV kinematics, lumped mass approach
+    </li>
+    <li><span class="keyword">ISO 11992-2/3</span> communication standard</li>
+    <li>
+      <span class="keyword">Volvo VTM</span> – in-house vehicle dynamics and maneuvering simulation tool
+    </li>
+  </ul>
+</article>
+
+<!-- 7. Learnings & Impact -->
+<article id="learnings" class="proj-docs-section" data-reveal>
+  <h2>Learnings &amp; Impact</h2>
+  <ul class="proj-docs-list">
+    <li>
+      Strengthened expertise in <span class="keyword">control system design</span> for
+      <span class="keyword">long combination vehicles</span>.
+    </li>
+    <li>
+      Learned to validate models by bridging simulation results with real-world
+      <span class="keyword">CAN signal data</span>.
+    </li>
+    <li>
+      Gained insights into <span class="keyword">off-tracking dynamics</span> and
+      <span class="keyword">corrective control strategies</span>.
+    </li>
+    <li>
+      Contributed to Volvo’s research roadmap for <span class="keyword">safer LCV operation</span> and
+      future <span class="keyword">yaw/steering control</span> solutions.
+    </li>
+  </ul>
+</article>
+
+
+        <!-- BACK LINK -->
+        <article class="proj-docs-section proj-docs-back-wrap" data-reveal>
           <a href="../projects.html" class="proj-docs-back">← Back to all projects</a>
         </article>
       </section>
@@ -186,5 +280,9 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Maulik. All rights reserved.</p>
   </footer>
+
+  <!-- custom cursor (same as other pages) -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 </body>
 </html>

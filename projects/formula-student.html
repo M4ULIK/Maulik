@@ -3,194 +3,592 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chalmers Formula Student – Chassis & Ergonomics | Maulik</title>
+  <title>Chalmers Formula Student – Chassis &amp; Ergonomics | Maulik</title>
+
+  <!-- shared styles / fonts / scripts (same as index + projects) -->
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <script defer src="../assets/js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="../assets/js/script.js"></script>
 </head>
 <body>
-  <!-- shared header -->
-  <header>
+  <!-- global background -->
+  <div class="bg-grid"></div>
+
+  <!-- shared header (same style as index/projects) -->
+  <header class="site-header">
     <nav class="navbar">
-      <a href="../index.html" class="logo">Maulik</a>
+      <a href="../index.html" class="logo">Maulik Rakesh Rajput</a>
+
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="../index.html#hero">Home</a></li>
-        <li><a href="../projects.html" class="active">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#timeline">Journey</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
+    <div class="scroll-progress"></div>
   </header>
 
   <main class="proj-docs-page">
-    <div class="proj-docs-shell">
+    <div class="proj-docs-shell" data-reveal>
       <!-- LEFT NAV -->
-      <aside class="proj-docs-nav">
-        <div class="proj-docs-title">Chalmers Formula Student – Chassis & Ergonomics</div>
+      <aside class="proj-docs-nav" data-reveal>
+        <div class="proj-docs-title">
+          Chalmers Formula Student – Chassis &amp; Ergonomics
+        </div>
+
         <nav>
-          <a href="#overview" class="proj-docs-link">Overview</a>
-          <a href="#background" class="proj-docs-link">Background</a>
-          <a href="#role" class="proj-docs-link">My Role</a>
-          <a href="#design" class="proj-docs-link">Chassis & Safety Design</a>
-          <a href="#integration" class="proj-docs-link">EV & DV Integration</a>
-          <a href="#tools" class="proj-docs-link">Tools & Tech</a>
-          <a href="#results" class="proj-docs-link">Competition & Outcomes</a>
-          <a href="#media" class="proj-docs-link">Media & Downloads</a>
+          <a href="#overview"     class="proj-docs-link">Overview</a>
+          <a href="#problem"      class="proj-docs-link">Problem Statement</a>
+          <a href="#role"         class="proj-docs-link">My Role</a>
+          <a href="#approach"     class="proj-docs-link">Approach</a>
+          <a href="#subprojects"  class="proj-docs-link">Subprojects</a>
+          <a href="#results"      class="proj-docs-link">Key Results</a>
+          <a href="#tools"        class="proj-docs-link">Tools &amp; Tech</a>
+          <a href="#learnings"    class="proj-docs-link">Learnings &amp; Impact</a>
+          <a href="#media"    class="proj-docs-link">Media</a>
         </nav>
+
         <div class="proj-docs-meta">
           <p><strong>Team:</strong> Chalmers Formula Student (CFS)</p>
           <p><strong>Car:</strong> Freja (2024)</p>
-          <p><strong>Event:</strong> FS East & FSG</p>
-          <p><strong>Year:</strong> 2024</p>
+          <p><strong>Events:</strong> FS East · FSG</p>
+          <p><strong>Classes:</strong> EV &amp; Driverless</p>
         </div>
       </aside>
 
       <!-- RIGHT CONTENT -->
       <section class="proj-docs-content">
-        <!-- MAIN HEADING -->
-        <article id="overview" class="proj-docs-section">
-          <h1>Chalmers Formula Student – Chassis & Ergonomics</h1>
+
+        <!-- HERO TITLE CARD -->
+        <article id="heading" class="proj-docs-section proj-docs-section--hero" data-reveal>
+          <h1>
+            Chalmers Formula Student – Chassis &amp; Ergonomics<br />
+            <span class="proj-docs-subtitle">Freja 2024 · EV &amp; Driverless</span>
+          </h1>
           <p class="proj-docs-lead">
-            Chalmers Formula Student (CFS) is a multidisciplinary motorsport engineering project where students design, manufacture, and race a Formula-style electric and autonomous race car.
-            In 2024, the team developed <strong>Freja</strong>, designed and built ~97% in-house by 70+ students from 11 nationalities, supported by 50+ industrial partners, and competing in both DV and EV classes.
+            Multidisciplinary motorsport project designing, manufacturing, and racing
+            a Formula-style electric and autonomous race car. I focused on the
+            <strong>carbon fiber monocoque</strong>, <strong>safety structures</strong>,
+            and <strong>integration</strong> with EV and DV subsystems.
           </p>
-          <p class="proj-docs-lead">
-            My work focused on the <strong>carbon fiber monocoque chassis, safety structures, and ergonomics</strong>, ensuring compliance with Formula Student rules while enabling integration of suspension,
-            aerodynamics, high-voltage, and driverless systems.
-          </p>
+          <ul class="proj-docs-tags">
+            <li>Composite Chassis</li>
+            <li>Crash &amp; Safety Structures</li>
+            <li>EV &amp; Driverless Integration</li>
+          </ul>
         </article>
 
-        <!-- VISUAL STRIP -->
-        <div class="proj-docs-visual">
-          <div class="proj-docs-visual-main">
-            <h2>Car / Monocoque visuals</h2>
-            <p>Use for 2024 car render, monocoque section, or layup visualization.</p>
-            <div class="proj-docs-visual-placeholder">FS CAR / MONOCOQUE IMAGE</div>
-          </div>
-          <div class="proj-docs-visual-side">
-            <div class="proj-docs-visual-card">
-              <h3>Manufacturing / DV video</h3>
-              <p>Short video of laminating, assembly, or driverless testing.</p>
-              <div class="proj-docs-visual-sm">VIDEO PLACEHOLDER</div>
-            </div>
-            <div class="proj-docs-visual-card">
-              <h3>Key documents</h3>
-              <ul>
-                <li><a href="#">SES / IAD (PDF)</a></li>
-                <li><a href="#">Composites layup (PDF)</a></li>
-                <li><a href="#">Rule compliance notes</a></li>
-              </ul>
-            </div>
-          </div>
+        <!-- SIMPLE VISUAL / HERO MEDIA (replace with real images later) -->
+        <div class="proj-carousel" data-reveal>
+          <figure class="proj-slide is-active">
+            <img src="../assets/img/cfs 1.jpg" alt="Freja 2024 car render / track shot">
+            <figcaption>Freja 2024 – Formula Student EV &amp; Driverless race car.</figcaption>
+          </figure>
+
+          <figure class="proj-slide">
+            <img src="../assets/img/Team Picture.jpg" alt="Monocoque and safety structure detail">
+            <figcaption>Team Picture of CFS24.</figcaption>
+          </figure>
+
+          <figure class="proj-slide">
+            <img src="../assets/img/cfs slide 1.png" alt="Workshop / manufacturing of monocoque">
+            <figcaption>Carbon fiber monocoque and safety structure details.</figcaption>
+          </figure>
+
+          <!-- arrows -->
+          <div class="proj-carousel-arrow left" data-dir="prev">❮</div>
+          <div class="proj-carousel-arrow right" data-dir="next">❯</div>
+
+          <!-- dots container (populated by JS) -->
+          <div class="proj-carousel-dots"></div>
         </div>
 
-        <!-- Background -->
-        <article id="background" class="proj-docs-section">
-          <h2>Background</h2>
-          <p>
-            CFS 2024 (Freja) was designed to compete in both Electric Vehicle (EV) and Driverless Vehicle (DV) classes at Formula Student East (Hungary) and Formula Student Germany (Hockenheim).
-            The challenge on the chassis/safety side was to create a <strong>lightweight yet structurally safe carbon fiber monocoque</strong> that complied with Formula Student rules (crash, egress,
-            harness, roll structures) while providing interfaces for EV components, suspension pickups, aero hardpoints, and DV sensors.
+        <!-- ===== 1. OVERVIEW / CONTEXT ===== -->
+        <article id="overview" class="proj-docs-section" data-reveal>
+          <h2>Project Overview</h2>
+          <p class="proj-docs-text">
+            Chalmers Formula Student (CFS) is a <span class="keyword">multidisciplinary motorsport</span>
+            engineering project where students design, manufacture, and race a
+            <span class="keyword">Formula-style electric and autonomous race car</span>.
+            In 2024, the team developed <strong>Freja</strong>, designed and built
+            ~<span class="keyword">97% in-house</span> by a team of 70+ students from 11 nationalities,
+            supported by 50+ industrial partners.
           </p>
-          <p>
-            The chassis team had to work closely with Aerodynamics, Suspension, Vehicle Dynamics, Electrical, and Driverless subteams to ensure all packaging and load paths were supported in the monocoque design.
-          </p>
-        </article>
-
-        <!-- My Role -->
-        <article id="role" class="proj-docs-section">
-          <h2>My Role</h2>
-          <ul>
-            <li>Worked on the carbon fiber monocoque CAD and layup definition.</li>
-            <li>Ensured compliance with FS rules for impact attenuator, front bulkhead, side impact, and driver safety.</li>
-            <li>Coordinated chassis interfaces with aero, suspension, and electrical teams.</li>
-            <li>Prepared documentation (SES/IAD) in Microsoft Excel and Teamcenter.</li>
-          </ul>
-        </article>
-
-        <!-- Chassis & Safety -->
-        <article id="design" class="proj-docs-section">
-          <h2>Chassis & Safety Design</h2>
-          <p>
-            The monocoque was designed as a <strong>lightweight CFRP safety cell</strong> with integrated hardpoints for suspension and aero. The design had to meet minimum laminate thicknesses,
-            crash energy absorption targets, and ergonomic constraints for the driver.
-          </p>
-          <p>
-            Simulation and validation were carried out to ensure adequate <strong>bending and torsional stiffness</strong>, load transfer to A-arm pickups, and compliance of the impact attenuator with FS requirements.
-          </p>
-          <ul>
-            <li>Monocoque CAD in Siemens NX / CATIA V5</li>
-            <li>FEA and crash analysis in ANSYS</li>
-            <li>Composite simulation in ANSYS ACP</li>
-            <li>Layup nesting and documentation</li>
-          </ul>
-        </article>
-
-        <!-- Integration -->
-        <article id="integration" class="proj-docs-section">
-          <h2>EV & Driverless Integration</h2>
-          <p>
-            Because Freja ran in both EV and DV classes, the chassis had to provide mounting and protection for:
-          </p>
-          <ul>
-            <li>HV battery and power electronics</li>
-            <li>Wiring and sensor harness routing</li>
-            <li>Driverless sensors (LiDAR, cameras, GPS) and their structural mounts</li>
-            <li>Serviceability and access for scrutineering</li>
-          </ul>
-          <p>
-            This required close coordination with the DV team to ensure sensor visibility and with the electrical team to maintain insulation and clearance, without compromising driver ergonomics.
+          <p class="proj-docs-text">
+            Freja competed in both <span class="keyword">Driverless (DV)</span> and
+            <span class="keyword">Electric Vehicle (EV)</span> classes at
+            <strong>Formula Student East (Hungary)</strong> and
+            <strong>Formula Student Germany (Hockenheim)</strong>, one of the most competitive
+            student motorsport environments in the world.
           </p>
         </article>
 
-        <!-- Tools -->
-        <article id="tools" class="proj-docs-section">
-          <h2>Tools & Technologies</h2>
-          <ul>
-            <li>Siemens NX (CAD)</li>
-            <li>ANSYS (FEA & crash analysis)</li>
-            <li>CATIA V5 (monocoque CAD & layup nesting)</li>
-            <li>ANSYS ACP (composite simulation)</li>
-            <li>MATLAB (optimization / documentation)</li>
-            <li>Teamcenter PLM (CAD integration)</li>
-            <li>Microsoft Excel (SES / IAD)</li>
-          </ul>
+        <!-- ===== 2. PROBLEM STATEMENT ===== -->
+        <article id="problem" class="proj-docs-section" data-reveal>
+          <h2>Problem Statement</h2>
+          <p class="proj-docs-text">
+            The core challenge was to design a <span class="keyword">lightweight yet structurally safe</span>
+            <strong>carbon fiber monocoque</strong> that complies with the Formula Student rulebook
+            while enabling integration of both <span class="keyword">manual driving</span> and
+            <span class="keyword">autonomous systems</span>.
+          </p>
+          <p class="proj-docs-text">
+            The chassis had to satisfy demanding <span class="keyword">stiffness</span>,
+            <span class="keyword">crash safety</span>, and <span class="keyword">manufacturability</span>
+            requirements, and at the same time coordinate packaging and load paths with
+            <strong>Aerodynamics</strong>, <strong>Suspension</strong>, <strong>Electrical</strong>,
+            and <strong>Driverless</strong> subgroups.
+          </p>
         </article>
 
-        <!-- Results -->
-        <article id="results" class="proj-docs-section">
-          <h2>Competition & Outcomes</h2>
-          <ul>
-            <li>Freja was designed and built ~97% in-house by a 70+ member team.</li>
-            <li>The car competed in both EV and Driverless classes at FS East and FSG.</li>
-            <li>Chassis met stiffness, safety, and manufacturability requirements while enabling integration of other subsystems.</li>
-            <li>Documentation and CAD were aligned in Teamcenter for cross-team access.</li>
-          </ul>
-        </article>
-
-        <!-- Media -->
-        <article id="media" class="proj-docs-section">
-          <h2>Media & Downloads</h2>
-          <div class="proj-docs-media-grid">
-            <div class="proj-docs-media-box">
-              <h3>Car / Monocoque images</h3>
-              <div class="proj-docs-media-placeholder">CAR / MONOCOQUE IMAGE</div>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Documents</h3>
-              <ul>
-                <li><a href="#">SES document (Excel/PDF)</a></li>
-                <li><a href="#">IAD / structural validation</a></li>
-                <li><a href="#">Manufacturing notes</a></li>
+        <!-- ===== 3. MY ROLE & RESPONSIBILITIES ===== -->
+        <article id="role" class="proj-docs-section" data-reveal>
+          <h2>My Role &amp; Responsibilities</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Designed and validated <span class="keyword">safety-critical components</span> such as
+              <strong>roll hoops</strong>, <strong>frontal crash structure</strong>, and
+              <strong>LiDAR mount</strong>, ensuring regulation compliance and integration within the monocoque.
+            </li>
+            <li>
+              Fabricated the <span class="keyword">carbon fiber sandwich composite monocoque</span>, and
+              supported its <span class="keyword">Structural Equivalency Spreadsheet (SES)</span> and
+              <span class="keyword">Impact Attenuator Dataform (IAD)</span> submissions.
+            </li>
+            <li>
+              Assisted in vehicle testing:
+              <ul class="proj-docs-list nested">
+                <li>Composite panel tests on UTM.</li>
+                <li>Crash testing of the impact attenuator.</li>
+                <li>Torsional stiffness testing of the monocoque.</li>
+                <li>Rain testing for sealing verification.</li>
+                <li>Dynamic and autonomous system tests for performance validation.</li>
               </ul>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Videos</h3>
-              <p>Driverless testing, dynamic events, or layup process.</p>
-            </div>
-          </div>
+            </li>
+            <li>
+              Served in the <span class="keyword">Vehicle Crew</span> during competitions:
+              car setup, inspection, and event readiness (wheels/tires, battery installation,
+              diffuser fitting, transporting the car between dynamic events).
+            </li>
+            <li>
+              Collaborated closely with cross-functional subgroups to align
+              <span class="keyword">design, analysis, and manufacturing</span> with tight project timelines.
+            </li>
+          </ul>
         </article>
 
-        <article class="proj-docs-section">
+        <!-- ===== 4. APPROACH ===== -->
+        <article id="approach" class="proj-docs-section" data-reveal>
+          <h2>Approach</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Represented the <span class="keyword">Chassis &amp; Safety Structures</span> subgroup
+              in weekly design reviews, leading manufacturing planning and troubleshooting
+              integration challenges.
+            </li>
+            <li>
+              Used a <span class="keyword">simulation-driven design</span> methodology:
+              combining CAD, FEA, and physical prototyping to refine stiffness,
+              manufacturability, and crash performance.
+            </li>
+            <li>
+              Standardized design workflows to improve <span class="keyword">traceability</span>,
+              documentation quality, and communication across subteams.
+            </li>
+            <li>
+              Worked hands-on during manufacturing to ensure
+              <span class="keyword">tooling accuracy</span>, layup precision, and final fitment of
+              structural components (bulkheads, roll hoop interfaces, IA mounts, sensor brackets).
+            </li>
+          </ul>
+        </article>
+
+
+                <!-- ===== 8. SUBPROJECTS (ROLL HOOPS, IA, LIDAR, MONOCOQUE) ===== -->
+<!-- ===== 8. SUBPROJECTS (ROLL HOOPS, IA, LIDAR, MONOCOQUE) ===== -->
+<section id="subprojects" class="proj-docs-section proj-subprojects">
+  <header class="proj-subprojects-header">
+    <h2>Subprojects</h2>
+    <p>
+      Focused design and validation work within the
+      <span class="keyword">Chassis &amp; Safety</span> scope for Freja (2024).
+    </p>
+  </header>
+
+  <div class="proj-subprojects-grid">
+    <!-- 1️⃣ Roll Hoops -->
+    <article class="proj-subcard">
+      <div class="proj-subcard-header">
+        <span class="proj-subcard-badge">1</span>
+        <h3>Roll Hoops (Main &amp; Front Hoops)</h3>
+      </div>
+
+      <p class="proj-subcard-tagline">
+        Roll-over protection structure providing a compliant safety envelope for the driver and internal components.
+      </p>
+
+      <ul class="proj-subcard-list">
+        <li>
+          Designed the main hoop using <span class="keyword">Docol R8 racing-grade steel</span> with a circular profile,
+          mounted via bolted inserts, brackets, and triangulated bracings for stiffness and durability.
+        </li>
+        <li>
+          Engineered a square-profile <span class="keyword">aluminum front hoop</span> for large bonding area and weight reduction.
+        </li>
+        <li>
+          Used <span class="keyword">MATLAB</span> for dimension and weight optimization, balancing stiffness and manufacturability.
+        </li>
+        <li>
+          Verified clearance with dashboard, steering, suspension, aero, TSAL, and shutdown systems.
+        </li>
+      </ul>
+
+      <div class="proj-subcard-tools">
+        <span>Siemens NX</span>
+        <span>ANSYS</span>
+        <span>MATLAB</span>
+        <span>Excel / SES</span>
+      </div>
+
+<!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/roll hoop.png" alt="Roll hoops CAD / fabrication" />
+</div>
+
+
+      <details class="proj-subcard-more">
+        <summary>More information</summary>
+        <p>
+          Achieved a regulation-compliant roll hoop assembly with improved manufacturing precision and reduced
+          complexity via <span class="keyword">laser-cut tubing profiles</span> and better jig alignment. All data was
+          documented and validated in the <span class="keyword">SES</span>, ensuring full FS rule compliance without
+          compromising ergonomics, visibility, or safety.
+        </p>
+      </details>
+    </article>
+
+    <!-- 2️⃣ Frontal Crash Structure -->
+    <article class="proj-subcard">
+      <div class="proj-subcard-header">
+        <span class="proj-subcard-badge">2</span>
+        <h3>Frontal Crash Structure </h3>
+      </div>
+
+      <p class="proj-subcard-tagline">
+        Crash absorption system protecting the driver’s legs in frontal impact scenarios.
+      </p>
+
+      <ul class="proj-subcard-list">
+        <li>
+          Developed an <span class="keyword">Impact Attenuator (IA)</span> bonded to an
+          <span class="keyword">Anti-Intrusion Plate (AIP)</span>, bolted to the front bulkhead.
+        </li>
+        <li>
+          Designed an aluminum AIP matching bulkhead geometry and used
+          <span class="keyword">Plascore aluminum honeycomb</span> as IA core for high specific energy absorption.
+        </li>
+        <li>
+          Updated adhesive and bonding methods with higher shear-strength glue for reliability and compliance.
+        </li>
+        <li>
+          Prepared the final <span class="keyword">Impact Attenuator Dataform (IAD)</span> with revised shear/buckling
+          calculations and front wing mount effects.
+        </li>
+      </ul>
+
+      <div class="proj-subcard-tools">
+        <span>Siemens NX</span>
+        <span>Excel</span>
+        <span>Word</span>
+        <span>IAD</span>
+      </div>
+
+      <!-- Image placeholder -->
+<!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/IA.png" alt="Roll hoops CAD / fabrication" />
+</div>
+
+
+      <details class="proj-subcard-more">
+        <summary>More information</summary>
+        <p>
+          The crash structure was designed to satisfy Formula Student requirements of absorbing
+          <span class="keyword">120&nbsp;kN</span> with no more than <span class="keyword">25&nbsp;mm</span> deformation at the AIP.
+          The validated solution improved bonding reliability and simplified assembly for competition use.
+        </p>
+      </details>
+    </article>
+
+    <!-- 3️⃣ LiDAR Mount -->
+    <article class="proj-subcard">
+      <div class="proj-subcard-header">
+        <span class="proj-subcard-badge">3</span>
+        <h3>LiDAR Mount (Driverless Class)</h3>
+      </div>
+
+      <p class="proj-subcard-tagline">
+        Rigid, vibration-resistant LiDAR mounting for reliable autonomous perception.
+      </p>
+
+      <ul class="proj-subcard-list">
+        <li>
+          Designed an <span class="keyword">aluminum mounting plate</span> fastened to steel tabs welded to the main hoop,
+          ensuring stiffness and ease of fabrication.
+        </li>
+        <li>
+          Performed <span class="keyword">static structural analysis</span> in ANSYS under a 4g bump scenario to evaluate
+          deflection and stress levels.
+        </li>
+        <li>
+          Ensured accessibility for calibration, maintenance, and wiring during competition.
+        </li>
+        <li>
+          Optimized geometry for <span class="keyword">water-cut fabrication</span> and standardized attachment design.
+        </li>
+      </ul>
+
+      <div class="proj-subcard-tools">
+        <span>Siemens NX</span>
+        <span>ANSYS</span>
+        <span>MATLAB</span>
+      </div>
+
+      <!-- Image placeholder -->
+<!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/Lidar mount.png" alt="Roll hoops CAD / fabrication" />
+</div>
+
+      <details class="proj-subcard-more">
+        <summary>More information</summary>
+        <p>
+          The mount delivered a stiff, lightweight, and easy-to-assemble solution with negligible deformation under
+          operational loads, maintaining LiDAR alignment and supporting reliable autonomous navigation throughout events.
+        </p>
+      </details>
+    </article>
+
+    <!-- 4️⃣ Carbon Fiber Monocoque -->
+    <article class="proj-subcard">
+      <div class="proj-subcard-header">
+        <span class="proj-subcard-badge">4</span>
+        <h3>Carbon Fiber Monocoque </h3>
+      </div>
+
+      <p class="proj-subcard-tagline">
+        CFRP sandwich monocoque providing high stiffness-to-weight ratio and SES-compliant safety.
+      </p>
+
+      <ul class="proj-subcard-list">
+        <li>
+          Contributed to CAD of key chassis components in <span class="keyword">Siemens NX</span> and
+          <span class="keyword">CATIA V5</span>, aligned with aero and suspension packaging.
+        </li>
+        <li>
+          Supported composite layup validation by preparing and analysing
+          <span class="keyword">three-point bending test panels</span> for SES equivalency.
+        </li>
+        <li>
+          Participated in composite manufacturing: ureol positive molds, CF negative molds, prepreg nesting,
+          vacuum bagging, debulking, curing, trimming, drilling, and subsystem integration.
+        </li>
+        <li>
+          Manufactured CF covers and a Kevlar <span class="keyword">HVD firewall</span>, and helped maintain
+          interface alignment with wings, firewall, battery housing, LV assembly, and suspension mounts.
+        </li>
+      </ul>
+
+      <div class="proj-subcard-tools">
+        <span>CATIA V5</span>
+        <span>Siemens NX</span>
+        <span>ANSYS Mechanical / ACP</span>
+        <span>Teamcenter</span>
+        <span>Excel / SES</span>
+      </div>
+
+      <!-- Image placeholder -->
+<!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/cfs slide 1.png" alt="Roll hoops CAD / fabrication" />
+</div>
+
+      <details class="proj-subcard-more">
+        <summary>More information</summary>
+        <p>
+          Work contributed to the successful design, fabrication, and validation of the Freja 2024 monocoque.
+          All layups were correlated with SES requirements through testing and simulation, resulting in a
+          lightweight, regulation-approved chassis and deeper practical understanding of composite processing
+          and cross-functional integration in a large motorsport project.
+        </p>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+
+
+
+       <!-- ===== 5. KEY RESULTS & OUTCOMES ===== -->
+<!-- ===== 5. KEY RESULTS & OUTCOMES ===== -->
+<article id="results" class="proj-docs-section" data-reveal>
+  <h2>Key Results &amp; Outcomes</h2>
+
+  <!-- keep these as plain points -->
+  <ul class="proj-docs-list">
+    <li>
+      Delivered a <span class="keyword">lightweight, rule-compliant monocoque</span> and safety system
+      that enabled competitive EV and DV operation.
+    </li>
+    <li>
+      Strengthened design validation through improved
+      <span class="keyword">IAD</span> and <span class="keyword">SES</span> documentation,
+      ensuring inspection readiness and compliance.
+    </li>
+  </ul>
+
+  <!-- visual cards just for East & Germany -->
+  <div class="fs-results-grid">
+    <!-- FS East card -->
+    <div class="fs-result-card">
+      <div class="fs-result-img">
+        <!-- replace with real event photo later -->
+              <div class="proj-subcard-thumb">
+  <img src="../assets/img/fs east.jpg" alt="Roll hoops CAD / fabrication" />
+</div>
+      </div>
+      <div class="fs-result-body">
+        <div class="fs-result-badge gold">🏆</div>
+        <h3>FS East · ZalaZONE, Hungary</h3>
+        <p>
+          <strong>1st Place – Dynamic Events (Driverless)</strong><br>
+          <strong>3rd Overall – Driverless Cup</strong><br>
+          Across a highly competitive European grid of driverless teams.
+        </p>
+      </div>
+    </div>
+
+    <!-- FS Germany card -->
+    <div class="fs-result-card">
+      <div class="fs-result-img">
+        <!-- replace with real event photo later -->
+        <div class="proj-subcard-thumb">
+  <img src="../assets/img/fsg.jpg" alt="Roll hoops CAD / fabrication" />
+</div>
+      </div>
+      <div class="fs-result-body">
+        <div class="fs-result-badge silver">🥈</div>
+        <h3>FS Germany · Hockenheim</h3>
+        <p>
+          <strong>2nd Overall – Driverless Cup</strong><br>
+          Among <span class="keyword">80+ international teams</span> in one of the
+          most competitive FS competitions globally.
+        </p>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+        <!-- ===== 6. TOOLS & TECHNOLOGIES ===== -->
+        <article id="tools" class="proj-docs-section" data-reveal>
+          <h2>Tools &amp; Technologies</h2>
+          <ul class="proj-docs-list">
+            <li><span class="keyword">CAD & visualization:</span> Siemens NX, CATIA V5 & Blender</li>
+            <li><span class="keyword">FEA:</span> ANSYS Mechanical &amp; ANSYS ACP</li>
+          
+            <li><span class="keyword">Documentation:</span> Microsoft Excel and Word (SES, IAD)</li>
+            <li><span class="keyword">PLM:</span> Teamcenter for CAD integration &amp; data management</li>
+          </ul>
+        </article>
+
+        <!-- ===== 7. LEARNINGS & IMPACT ===== -->
+        <article id="learnings" class="proj-docs-section" data-reveal>
+          <h2>Learnings &amp; Impact</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Gained deep practical expertise in <span class="keyword">composite chassis design</span>,
+              crash validation, and structural analysis for motorsport applications.
+            </li>
+            <li>
+              Experienced end-to-end vehicle development: from concept and design to
+              <span class="keyword">manufacturing, testing, and competition support</span>.
+            </li>
+            <li>
+              Strengthened <span class="keyword">teamwork and leadership</span> in a large,
+              multidisciplinary, high-pressure environment.
+            </li>
+          </ul>
+        </article>
+
+
+
+        <!-- ===== 9. MEDIA & DOWNLOADS ===== -->
+<section id="media" class="proj-docs-section" data-reveal>
+  <h2>Media</h2>
+  <p class="proj-docs-text">
+    A collection of photos of Freja and the team through the season of 2024
+  </p>
+
+   <!-- SIMPLE VISUAL / HERO MEDIA (replace with real images later) -->
+        <div class="proj-carousel" data-reveal>
+          <figure class="proj-slide is-active">
+            <img src="../assets/img/cfs media 1.jpg" alt="Freja 2024 car render / track shot">
+            <figcaption>Freja at FS EAST ZalaZone 2024.</figcaption>
+          </figure>
+
+          <figure class="proj-slide">
+            <img src="../assets/img/cfs media 2.png" alt="Monocoque and safety structure detail">
+            <figcaption>Freja at Hockenheimring (FSG 24)</figcaption>
+          </figure>
+
+          <figure class="proj-slide">
+            <img src="../assets/img/cfs media 3.jpg" alt="Workshop / manufacturing of monocoque">
+            <figcaption>Team Photo at FS East 2024</figcaption>
+          </figure>
+
+
+                    <figure class="proj-slide">
+            <img src="../assets/img/cfs media 4.jpg" alt="Workshop / manufacturing of monocoque">
+            <figcaption>Night Photo at FS Germany 2024</figcaption>
+          </figure>
+
+
+
+
+          <!-- arrows -->
+          <div class="proj-carousel-arrow left" data-dir="prev">❮</div>
+          <div class="proj-carousel-arrow right" data-dir="next">❯</div>
+
+          <!-- dots container (populated by JS) -->
+          <div class="proj-carousel-dots"></div>
+        </div>
+
+
+<!-- VIDEO BUTTONS -->
+<div class="media-video-buttons">
+  <a href="https://youtu.be/xi28kF3kCN8?si=oKWXuiFG6wYXIjgM" 
+     class="media-video-btn" target="_blank">
+     ▶ Driverless Trackdrive – FSG 2024
+  </a>
+
+  <a href="https://youtu.be/GRHANDWnb9w?si=lLs02zt4xKWbE-1J" 
+     class="media-video-btn" target="_blank">
+     ▶ Driverless Trackdrive – FS East 2024
+  </a>
+</div>
+
+</section>
+
+
+        <!-- BACK LINK -->
+        <article class="proj-docs-section proj-docs-back-wrap" data-reveal>
           <a href="../projects.html" class="proj-docs-back">← Back to all projects</a>
         </article>
       </section>
@@ -200,5 +598,9 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Maulik. All rights reserved.</p>
   </footer>
+
+  <!-- custom cursor (same as other pages) -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 </body>
 </html>

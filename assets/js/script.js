@@ -530,52 +530,103 @@ document.addEventListener("click", (e) => {
 
 // ===== INDIVIDUAL PROJECT PAGE: Scroll Reveal + Active Nav =====
 (function () {
-  const sections = document.querySelectorAll('.proj-docs-section, .proj-docs-visual-main, .proj-docs-visual-card');
+  const sections = document.querySelectorAll(
+    '.proj-docs-section, .proj-docs-visual-main, .proj-docs-visual-card'
+  );
   const navLinks = document.querySelectorAll('.proj-docs-link');
 
-  if (!sections.length) return; // Not on a docs page → bail
+  if (!sections.length || !navLinks.length) return; // not on a docs page → bail
 
-  // Mark that JS is active so CSS can safely hide + animate
   document.body.classList.add('js-doc-reveal');
 
-  // Reveal animation
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, {
-    threshold: 0.18
+  // ---------- 1) REVEAL ANIMATION ----------
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+    }
+  );
+
+  sections.forEach((sec) => revealObserver.observe(sec));
+
+  // ---------- 2) ACTIVE LINK ON SCROLL ----------
+  const header = document.querySelector('.site-header');
+  const headerOffset = header ? header.offsetHeight + 12 : 72;
+
+  const idToLink = new Map();
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
+    const id = href.slice(1);
+    const target = document.getElementById(id);
+    if (target) {
+      idToLink.set(id, link);
+    }
   });
 
-  sections.forEach(sec => revealObserver.observe(sec));
-
-  // Sidebar active link
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
         const id = entry.target.getAttribute('id');
         if (!id) return;
 
-        navLinks.forEach(a => {
-          a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
-        });
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
+        const activeLink = idToLink.get(id);
+        if (!activeLink) return;
 
-  document.querySelectorAll('.proj-docs-section').forEach(sec => {
-    sectionObserver.observe(sec);
+        navLinks.forEach((a) => a.classList.remove('is-active'));
+        activeLink.classList.add('is-active');
+      });
+    },
+    {
+      root: null,
+      // "active region" is slightly below the sticky header and not too close to bottom
+      rootMargin: `-${headerOffset}px 0px -55% 0px`,
+      threshold: 0.25,
+    }
+  );
+
+  document
+    .querySelectorAll('.proj-docs-section[id]')
+    .forEach((sec) => sectionObserver.observe(sec));
+
+  // ---------- 3) SMOOTH SCROLL WITH HEADER OFFSET ON CLICK ----------
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
+
+    const id = href.slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const rect = target.getBoundingClientRect();
+      const offsetTop = rect.top + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+
+      // Immediately reflect selection in sidebar
+      navLinks.forEach((a) => a.classList.remove('is-active'));
+      link.classList.add('is-active');
+    });
   });
 })();
 
 
-// ===== Simple project media carousel (docs pages) =====
-/* ==== Project Page Carousel (with full-duration videos) ==== */
 
+// ===== Simple project media carousel (docs pages) =====
+// ===== Project Page Carousel (images + full-duration videos) =====
 document.querySelectorAll(".proj-carousel").forEach(carousel => {
   const slides = [...carousel.querySelectorAll(".proj-slide")];
   const dotsContainer = carousel.querySelector(".proj-carousel-dots");
@@ -585,7 +636,7 @@ document.querySelectorAll(".proj-carousel").forEach(carousel => {
   let index = 0;
   let autoplayTimer = null;
 
-  /* create dots */
+  // --- Create dots ---
   slides.forEach((_, i) => {
     const dot = document.createElement("div");
     dot.className = "proj-carousel-dot" + (i === 0 ? " is-active" : "");
@@ -604,8 +655,7 @@ document.querySelectorAll(".proj-carousel").forEach(carousel => {
     });
   }
 
-  function scheduleNext() {
-    // clear any previous timer
+  function queueNext() {
     clearTimeout(autoplayTimer);
 
     const activeSlide = slides[index];
@@ -614,20 +664,17 @@ document.querySelectorAll(".proj-carousel").forEach(carousel => {
     // default delay for images
     let delay = 5500;
 
-    // if there's a video with a valid duration, use that instead
     if (video && !isNaN(video.duration) && video.duration > 0.5) {
-      delay = video.duration * 1000;
+      delay = video.duration * 1000; // full video length
     }
 
     autoplayTimer = setTimeout(() => {
       const nextIndex = (index + 1) % slides.length;
-      showSlide(nextIndex, { fromAuto: true });
+      showSlide(nextIndex); // <-- no special fromAuto flag
     }, delay);
   }
 
-  function showSlide(i, opts = {}) {
-    const { fromAuto = false } = opts;
-
+  function showSlide(i) {
     slides.forEach(s => s.classList.remove("is-active"));
     dots.forEach(d => d.classList.remove("is-active"));
 
@@ -635,56 +682,131 @@ document.querySelectorAll(".proj-carousel").forEach(carousel => {
     dots[i].classList.add("is-active");
     index = i;
 
-    // handle video playback on the active slide
+    // reset videos
     clearAllVideos();
+
     const activeVideo = slides[i].querySelector("video");
     if (activeVideo) {
       activeVideo.currentTime = 0;
-      const playPromise = activeVideo.play();
-      if (playPromise && typeof playPromise.then === "function") {
-        playPromise.catch(() => {
-          /* ignore autoplay errors (e.g. not muted) */
-        });
-      }
-    }
 
-    // for user interactions and initial load, reschedule autoplay
-    if (!fromAuto) {
-      scheduleNext();
+      const startPlayback = () => {
+        const playPromise = activeVideo.play();
+        if (playPromise && typeof playPromise.then === "function") {
+          playPromise.catch(() => {
+            // ignore autoplay errors (e.g. not allowed without user gesture)
+          });
+        }
+        // once we know duration, schedule next slide
+        queueNext();
+      };
+
+      if (isNaN(activeVideo.duration) || activeVideo.duration === Infinity) {
+        // wait for metadata, then play + queue next
+        activeVideo.addEventListener("loadedmetadata", startPlayback, { once: true });
+      } else {
+        startPlayback();
+      }
+    } else {
+      // image slide → just schedule next with default delay
+      queueNext();
     }
   }
 
-  /* arrow buttons */
-  const leftArrow = carousel.querySelector(".proj-carousel-arrow.left");
+  // --- Arrow buttons ---
+  const leftArrow  = carousel.querySelector(".proj-carousel-arrow.left");
   const rightArrow = carousel.querySelector(".proj-carousel-arrow.right");
 
   if (leftArrow) {
     leftArrow.addEventListener("click", () => {
       const nextIndex = (index - 1 + slides.length) % slides.length;
-      showSlide(nextIndex); // user action ⇒ reschedule autoplay
+      showSlide(nextIndex);
     });
   }
 
   if (rightArrow) {
     rightArrow.addEventListener("click", () => {
       const nextIndex = (index + 1) % slides.length;
-      showSlide(nextIndex); // user action ⇒ reschedule autoplay
+      showSlide(nextIndex);
     });
   }
 
-  /* dot click */
+  // --- Dot click ---
   dots.forEach(dot => {
     dot.addEventListener("click", () => {
       const target = Number(dot.dataset.index);
       if (!Number.isNaN(target)) {
-        showSlide(target); // user action ⇒ reschedule autoplay
+        showSlide(target);
       }
     });
   });
 
-  // initial state
-  showSlide(0); // will also call scheduleNext()
+  // initial state (this will also start autoplay)
+  showSlide(0);
 });
 
 
 
+
+// About-carousel initializer (namespaced)
+document.querySelectorAll('.about-carousel').forEach(carousel => {
+  const slides = [...carousel.querySelectorAll('.about-slide')];
+  const dotsContainer = carousel.querySelector('.about-carousel-dots');
+  if (!slides.length || !dotsContainer) return;
+
+  let index = 0;
+  let autoplayTimer = null;
+
+  // create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'about-carousel-dot' + (i === 0 ? ' is-active' : '');
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+  });
+  const dots = [...dotsContainer.children];
+
+  function clearAllVideos() {
+    slides.forEach(slide => {
+      const vid = slide.querySelector('video');
+      if (vid) vid.pause();
+    });
+  }
+
+  function scheduleNext() {
+    clearTimeout(autoplayTimer);
+    let delay = 4500; // default for images
+    autoplayTimer = setTimeout(() => showSlide((index + 1) % slides.length, { fromAuto: true }), delay);
+  }
+
+  function showSlide(i, opts = {}) {
+    const { fromAuto = false } = opts;
+    slides.forEach(s => s.classList.remove('is-active'));
+    dots.forEach(d => d.classList.remove('is-active'));
+    slides[i].classList.add('is-active');
+    dots[i].classList.add('is-active');
+    index = i;
+    clearAllVideos();
+    const activeVideo = slides[i].querySelector('video');
+    if (activeVideo) {
+      activeVideo.currentTime = 0;
+      const prom = activeVideo.play();
+      if (prom && typeof prom.then === 'function') prom.catch(()=>{/* ignore play errors */});
+    }
+    if (!fromAuto) scheduleNext();
+  }
+
+  // arrows
+  const left = carousel.querySelector('.about-carousel-arrow.left');
+  const right = carousel.querySelector('.about-carousel-arrow.right');
+  if (left) left.addEventListener('click', () => showSlide((index - 1 + slides.length) % slides.length));
+  if (right) right.addEventListener('click', () => showSlide((index + 1) % slides.length));
+
+  // dots
+  dots.forEach(dot => dot.addEventListener('click', () => {
+    const target = Number(dot.dataset.index);
+    if (!Number.isNaN(target)) showSlide(target);
+  }));
+
+  // init
+  showSlide(0);
+});

@@ -2852,6 +2852,7 @@ header,
 .about-section {
   padding: 4.5rem 0;
   background: #12141a;
+  margin-bottom: 3.5rem; /* Adjust this value for more/less space */
   /* dark neutral grey (not bluish) */
 }
 
@@ -3490,4 +3491,1378 @@ section[id] {
   height: 100%;
   object-fit: cover;  /* keeps it perfectly sized */
   display: block;
+}
+
+
+/* Hero section heading tweaks */
+.proj-docs-section--hero h1 {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+/* Subtitle row: subtitle left, link right */
+.proj-docs-subrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Subtitle style */
+.proj-docs-subtitle {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+/* Thesis link on the right */
+.proj-docs-report-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.35);
+  border: 1px solid rgba(59,130,246,0.4);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.proj-docs-report-link:hover {
+  background: var(--primary);
+  color: #f9fafb;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+/* Mobile: stack subtitle + link nicely */
+@media (max-width: 700px) {
+  .proj-docs-subrow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .proj-docs-report-link {
+    margin-top: 0.15rem;
+  }
+}
+
+
+/* === Hero card spacing & alignment tweaks === */
+
+/* Section padding a bit tighter */
+.proj-docs-section--hero {
+  padding: 1.3rem 1.6rem 1.1rem;
+}
+
+/* Title: slightly less gap below */
+.proj-docs-section--hero h1 {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+/* Subtitle row: align center & reduce bottom gap */
+.proj-docs-subrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;          /* was baseline */
+  gap: 1rem;
+  margin-bottom: 0.45rem;       /* was 0.75rem */
+}
+
+/* Subtitle stays as is, just in case you want it a hair smaller */
+.proj-docs-subtitle {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+}
+
+/* Thesis link: a bit more compact */
+.proj-docs-report-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.22rem 0.8rem;
+  border-radius: 999px;
+}
+
+/* Lead paragraph: tighter to subtitle, more breathing room before tags */
+.proj-docs-lead {
+  margin-top: 0.1rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+/* Tags: just a small nudge up */
+.proj-docs-tags {
+  margin-top: 0.1rem;
+}
+
+/* Mobile: keep stacking behaviour */
+@media (max-width: 700px) {
+  .proj-docs-subrow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+
+/* === Thesis link row between hero and carousel === */
+
+.proj-docs-report-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0.4rem 0 0.6rem;   /* small gap under hero, small gap above carousel */
+}
+
+/* pill-style link matching the theme */
+.proj-docs-report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e5edff;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(191, 219, 254, 0.3);
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+}
+
+.proj-docs-report-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.8);
+  filter: brightness(1.05);
+}
+
+/* On small screens, keep it full-width and centered-ish */
+@media (max-width: 700px) {
+  .proj-docs-report-row {
+    justify-content: flex-start;
+    margin-left: 0.1rem;
+  }
+}
+
+
+/* === Glass Button === */
+.proj-docs-report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #dbeafe;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.proj-docs-report-link:hover {
+  background: rgba(59,130,246,0.18);
+  border-color: rgba(147,197,253,0.35);
+  box-shadow: 0 0 18px rgba(147,197,253,0.35);
+  transform: translateY(-1px);
+}
+
+/* ===================================================== */
+/* PROJECT PAGES – DARK GLASS HERO WITH BLUE CORNER GLOW */
+/* ===================================================== */
+
+body .proj-docs-section--hero {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(22, 77, 195, 0.55),   /* deep blue glow */
+      rgba(15, 23, 42, 0.05) 45%,
+      rgba(15, 23, 42, 0.92) 75%,
+      rgba(2, 6, 23, 1) 100%
+    );
+  border-radius: 1rem;
+  padding: 1.7rem 1.9rem 1.45rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+  margin-bottom: 1.4rem;
+  width: 100%;
+  align-self: stretch;
+  backdrop-filter: blur(10px) saturate(130%);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+/* Title + subtitle */
+body .proj-docs-section--hero h1 {
+  font-size: clamp(2rem, 3.2vw, 2.55rem);
+  font-weight: 800;
+  color: #e2e8f0;
+  line-height: 1.2;
+  margin-bottom: 0.55rem;
+}
+
+body .proj-docs-subtitle {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(203,213,225,0.9);
+  margin-top: 0.35rem;
+}
+
+/* Lead text */
+body .proj-docs-lead {
+  font-size: 0.98rem;
+  color: var(--ink-muted);
+  margin: 0.75rem 0 1.1rem;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+/* Pill tags */
+body .proj-docs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+  padding-bottom: .1rem;
+}
+
+body .proj-docs-tags li {
+  list-style: none;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  background: rgba(30, 58, 138, 0.45); /* deep navy */
+  border: 1px solid rgba(96,165,250,0.45);
+  color: rgba(226,232,240,0.95);
+  backdrop-filter: blur(6px);
+}
+
+/* Hover effect */
+body .proj-docs-section--hero:hover {
+  transform: translateY(-2px);
+  border-color: rgba(147,197,253,0.6);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.85);
+}
+
+/* Apply matching dark style to all subsequent sections */
+.proj-docs-section {
+  background: rgba(10,16,28,0.88);
+  border-radius: 0.85rem;
+  padding: 1.1rem 1.25rem 1rem;
+  border: 1px solid rgba(30,64,175,0.28);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+.proj-docs-section h2 {
+  color: #e2e8f0;
+}
+
+.proj-docs-section p,
+.proj-docs-section li {
+  color: rgba(203,213,225,0.88);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  body .proj-docs-section--hero {
+    padding: 1.4rem 1.25rem 1.2rem;
+  }
+  body .proj-docs-section--hero h1 {
+    font-size: 1.75rem;
+  }
+}
+
+
+/* Active state for left nav links */
+.proj-docs-link.is-active {
+  color: var(--primary);
+}
+
+.proj-docs-link.is-active::before {
+  content: "";
+  position: absolute;
+  left: -0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+
+/* Subtle highlight by color only */
+.keyword {
+  color: #7fb0ff;            /* soft bright blue */
+  font-weight: 600;          /* mild emphasis */
+}
+
+
+/* Keyword highlight used across project pages */
+.keyword {
+  color: #a5c8ff;
+  font-weight: 600;
+}
+
+/* Patent callout */
+.patent-callout {
+  margin-top: 0.8rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background: radial-gradient(circle at 0% 0%, rgba(59,130,246,0.15), transparent 55%),
+              rgba(15,23,42,0.85);
+  border: 1px solid rgba(129,140,248,0.45);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.patent-callout p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #e5edff;
+}
+
+.patent-pill {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #4f46e5);
+  color: #0b1220;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+
+
+/* ===========================
+   PROJECT PAGE SECTION CLEANUP
+   =========================== */
+
+.proj-docs-section h2 {
+  font-size: 1.25rem;
+  color: #e8efff;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.proj-docs-text {
+  color: #cdd9f3;
+  line-height: 1.65;
+  margin-bottom: 0.6rem;
+}
+
+.proj-docs-list li {
+  margin-bottom: 0.45rem;
+  color: #cdd9f3;
+  line-height: 1.6;
+}
+
+
+
+
+/* ===========================
+   PREMIUM PATENT CALLOUT BOX
+   =========================== */
+
+.proj-docs-patent {
+  margin-top: 1.8rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(30,58,138,0.5) 0%,      /* deep blue glow */
+    rgba(15,23,42,0.94) 55%      /* dark glass */
+  );
+
+  border: 1px solid rgba(148,163,184,0.22);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.55);
+}
+
+.proj-docs-patent-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.proj-docs-patent h2 {
+  font-size: 1.3rem;
+  color: #e9f2ff;
+  margin-bottom: 0.6rem;
+}
+
+.patent-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #60a5fa, #818cf8);
+  color: #0e1628;
+
+  margin-bottom: 0.8rem;
+  box-shadow: 0 0 18px rgba(96,165,250,0.45);
+}
+
+.patent-note {
+  color: #c9d7f5;
+  opacity: 0.95;
+  font-size: 0.92rem;
+  margin-top: 0.4rem;
+}
+
+
+
+
+/* ===== Subprojects grid – Formula Student page ===== */
+
+/* Remove gradient from subprojects wrapper */
+.proj-subprojects {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0; /* optional: makes spacing match other sections */
+}
+
+
+/* header */
+.proj-subprojects-header {
+  padding: 1rem 1.2rem 0.5rem;
+  
+  border-bottom: 1px solid rgba(148,163,184,0.25);
+}
+
+.proj-subprojects-header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.proj-subprojects-header p {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  max-width: 40rem;
+}
+
+/* grid */
+.proj-subprojects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .proj-subprojects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* card */
+.proj-subcard {
+  position: relative;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148,163,184,0.45);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2), transparent 60%),
+    rgba(15,23,42,0.96);
+  box-shadow: 0 10px 28px rgba(15,23,42,0.65);
+  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.proj-subcard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(129,140,248,0.85);
+  box-shadow: 0 20px 42px rgba(15,23,42,0.9);
+}
+
+/* header */
+.proj-subcard-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.4rem;
+}
+
+.proj-subcard-badge {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0%, #38bdf8, #6366f1);
+  color: #0b1120;
+  font-size: 0.86rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proj-subcard-header h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* description text */
+.proj-subcard-tagline {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+.proj-subcard-list {
+  font-size: 0.8rem;
+  color: #e5e7eb;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.proj-subcard-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.proj-subcard-tools span {
+  font-size: 0.68rem;
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.6);
+}
+
+/* ====== IMAGE SECTION (BOTTOM) ====== */
+
+.proj-subcard-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.7rem;
+  margin-top: 0.6rem;
+  border: 1px solid rgba(148,163,184,0.4);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(59,130,246,0.4), transparent 55%),
+    radial-gradient(circle at 90% 100%, rgba(129,140,248,0.4), transparent 60%),
+    #020617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: rgba(226,232,240,0.9);
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.proj-subcard-thumb:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(15,23,42,0.9);
+  border-color: rgba(191,219,254,0.95);
+}
+
+/* if user adds real images later */
+.proj-subcard-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* details */
+.proj-subcard-more {
+  border-top: 1px solid rgba(148,163,184,0.25);
+  margin-top: 0.7rem;
+  padding-top: 0.4rem;
+}
+
+.proj-subcard-more summary {
+  font-size: 0.78rem;
+  color: #93c5fd;
+  cursor: pointer;
+}
+
+.proj-subcard-more summary::before {
+  content: "▸ ";
+}
+
+
+
+
+/* ===== Formula Student results mini-cards ===== */
+
+/* Move radial gradient BG to Key Results section */
+#results {
+  background: radial-gradient(circle at top left,
+              rgba(37,99,235,0.20),
+              rgba(15,23,42,0.96) 45%,
+              rgba(15,23,42,1) 100%);
+  border-radius: 1rem;
+  border: 1px solid rgba(148,163,184,0.35);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.70);
+  padding: 1.5rem 1.3rem;
+}
+
+
+.fs-results-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .fs-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fs-result-card {
+  background: rgba(15,23,42,0.9);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148,163,184,0.4);
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(15,23,42,0.75);
+  backdrop-filter: blur(10px);
+  transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.fs-result-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+              rgba(59,130,246,0.35),
+              transparent 55%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+
+.fs-result-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(129,140,248,0.85);
+  box-shadow: 0 20px 44px rgba(15,23,42,0.9);
+}
+
+.fs-result-card:hover::before {
+  opacity: 1;
+}
+
+/* 4:3 image area */
+.fs-result-img {
+  aspect-ratio: 4 / 3;
+  background: rgba(15,23,42,0.9);
+  border-bottom: 1px solid rgba(148,163,184,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fs-result-img-ph {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  opacity: 0.85;
+}
+
+/* content */
+.fs-result-body {
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.fs-result-body h3 {
+  margin: 0.4rem 0 0.35rem;
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.fs-result-body p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+
+/* badges */
+.fs-result-badge {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.15rem;
+  box-shadow: 0 0 12px rgba(250,204,21,0.55);
+}
+
+.fs-result-badge.gold {
+  background: radial-gradient(circle at 30% 20%, #facc15, #eab308);
+}
+
+.fs-result-badge.silver {
+  background: radial-gradient(circle at 30% 20%, #e5e7eb, #a1a1aa);
+  box-shadow: 0 0 12px rgba(209,213,219,0.6);
+}
+
+.fs-result-badge.bronze {
+  background: radial-gradient(circle at 30% 20%, #ebe8e5, #e9982f);
+  box-shadow: 0 0 12px rgba(212, 142, 12, 0.6);
+}
+
+/* ==== Subprojects SECTION should look like a normal section ==== */
+#subprojects.proj-subprojects {
+  background: transparent !important;     /* Remove block bg */
+  border: none !important;                /* Remove block border */
+  box-shadow: none !important;            /* Remove shadow */
+  padding: 0 !important;                  /* Remove card-like padding */
+  margin: 2rem 0 !important;              /* Normal spacing between sections */
+}
+
+/* Header inside should also be clean */
+#subprojects .proj-subprojects-header {
+  background: transparent !important;
+  padding: 0 0 1rem !important;
+  border: none !important;
+}
+
+/* Keep the GRID + CARDS EXACTLY as they were */
+
+
+
+
+/* ===== Highlighted achievements section (DJS Miles) ===== */
+/* highlight section bg */
+.proj-docs-section--highlight {
+  background: radial-gradient(circle at top left,
+              rgba(56,189,248,0.20),
+              rgba(15,23,42,0.98) 45%,
+              rgba(15,23,42,1) 100%);
+  border-radius: 1rem;
+  border: 1px solid rgba(148,163,184,0.45);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.85);
+}
+
+/* awards spacing */
+.djs-awards-grid {
+  margin-top: 0.9rem;
+}
+
+/* patent certificates row */
+.djs-patent-block {
+  margin-top: 1.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(148,163,184,0.35);
+}
+
+.djs-patent-block h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.25rem;
+}
+
+.djs-patent-docs {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .djs-patent-docs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.djs-patent-doc {
+  position: relative;
+  background: rgba(15,23,42,0.96);
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(148,163,184,0.9);
+  padding: 0.65rem;
+  font-size: 0.78rem;
+  text-align: center;
+  color: #e5edff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 210 / 297; /* A4 portrait */
+  box-shadow: 0 12px 28px rgba(15,23,42,0.85);
+}
+
+
+/* --- Emoji award badges (clean & consistent with CFS) --- */
+.djs-award-emoji {
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.6rem;
+  height: 2.6rem;
+
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+
+  flex-shrink: 0;
+}
+
+
+/* DJS Miles only – center the 3rd subproject card on desktop */
+.proj-subprojects-grid--djs {
+  /* same 2-column layout you had */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+/* on wider screens, center the 3rd card with equal space on both sides */
+@media (min-width: 900px) {
+  .proj-subprojects-grid--djs .proj-subcard:nth-child(3) {
+    grid-column: 1 / -1;        /* span both columns */
+    justify-self: center;       /* center horizontally */
+    max-width: 520px;           /* keeps it from stretching full width */
+  }
+}
+
+/* optional: mobile still stacks them 1 per row */
+@media (max-width: 899px) {
+  .proj-subprojects-grid--djs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==== DJS Miles Achievement Cards ==== */
+
+.djs-ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.3rem;
+  margin-top: 1.3rem;
+}
+
+/* full clickable card */
+.djs-ach-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.djs-ach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  border-color: rgba(99,102,241,0.75);
+}
+
+/* ==== 16:9 image box ==== */
+.djs-ach-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(51,65,85,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.djs-ach-img-ph {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  opacity: 0.75;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+/* body text */
+.djs-ach-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.djs-ach-badge {
+  font-size: 1.45rem;
+  margin-bottom: 0.35rem;
+}
+
+.djs-ach-card h3 {
+  margin: 0 0 0.35rem;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.djs-ach-card p {
+  color: #93a4c6;
+  font-size: 0.87rem;
+}
+
+
+/* container for the image (keeps 4:3 aspect ratio) */
+.proj-subcard-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;          /* modern browsers — keeps 4:3 */
+  max-height: 320px;            /* optional: cap height on large screens */
+  border-radius: 0.65rem;       /* match card radius or tweak */
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  display: block;
+  margin: 0.5rem 0 0.6rem;      /* spacing above 'More' area */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* the image fills the container and crops cleanly */
+.proj-subcard-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;            /* crop while preserving cover */
+  object-position: center;
+}
+
+
+.proj-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.proj-video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+/* ===== Media Section: YouTube Buttons ===== */
+
+.media-video-buttons {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.media-video-btn {
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #eaf0ff;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.media-video-btn:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(96, 165, 250, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+
+/* ===== About-carousel (namespaced) — does not affect .proj-carousel ===== */
+.about-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: transparent;
+  max-width: 100%;
+}
+
+/* Slides: stacked & fade */
+.about-carousel .about-slide {
+  opacity: 0;
+  transition: opacity 0.55s ease-in-out;
+  position: absolute;
+  inset: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.about-carousel .about-slide.is-active {
+  opacity: 1;
+  position: relative; /* active contributes to layout */
+}
+
+/* Image: responsive 16:9 with object-fit cover */
+.about-carousel .about-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 8px 22px rgba(2,6,23,0.45);
+}
+
+/* Caption sits below image (space reserved so dots won't overlap) */
+.about-carousel .about-slide figcaption {
+  margin: 0.6rem 0 0;
+  padding-left: 0.25rem;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Arrows - namespaced */
+.about-carousel .about-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 999px;
+  background: rgba(11,17,32,0.65);
+  color: #eaf0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 40;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.5);
+  transition: transform .15s ease, background .18s ease;
+}
+.about-carousel .about-carousel-arrow.left { left: 10px; }
+.about-carousel .about-carousel-arrow.right { right: 10px; }
+.about-carousel .about-carousel-arrow:hover { transform: translateY(-50%) scale(1.06); background: rgba(59,130,246,0.16); }
+
+/* Dots container positioned below caption so they don't clash */
+.about-carousel-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+  padding-bottom: 6px;
+  z-index: 30;
+  position: relative;
+}
+
+/* Dot style */
+.about-carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(148,163,184,0.35);
+  border: 1px solid rgba(148,163,184,0.12);
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+}
+.about-carousel-dot.is-active {
+  background: rgba(99,102,241,0.95);
+  transform: scale(1.25);
+}
+
+/* Card container styling (keeps it consistent with about) */
+.about-media-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  padding: 1.05rem;
+  border: 1px solid rgba(148,163,184,0.06);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+  
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .about-carousel .about-carousel-arrow { width: 36px; height: 36px; line-height: 36px; }
+  .about-carousel .about-slide img { aspect-ratio: 16 / 9; max-height: 54vh; }
+  .about-carousel-dots { margin-top: 10px; }
+}
+
+
+/* ===== Shrink About Carousel Images (Only affects .about-carousel) ===== */
+.about-carousel {
+  max-width: 760px;      /* ↓ Reduce overall width */
+  margin: 0 auto;
+}
+
+.about-carousel .about-slide img {
+  max-height: 380px;     /* ↓ Reduce height */
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Caption spacing stays nice */
+.about-carousel .about-slide figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+}
+
+/* Arrows stay closer in */
+.about-carousel .about-carousel-arrow {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 1.1rem;
+}
+
+/* On mobile make it slightly smaller */
+@media (max-width: 700px) {
+  .about-carousel {
+    max-width: 92%;
+  }
+  .about-carousel .about-slide img {
+    max-height: 240px;
+  }
+}
+
+
+
+/* ===== About-carousel (namespaced) — does not affect .proj-carousel ===== */
+.about-media-inner {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card container styling (keeps it consistent with about) */
+.about-media-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  padding: 1.5rem 1.3rem 1.1rem 1.3rem;
+  border: 1px solid rgba(148,163,184,0.07);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.43);
+  max-width: 950px;       /* Edit this for wider or narrower section */
+  width: 100%;            /* Responsive */
+  margin: 0 auto;
+}
+
+/* Section title - spacing below */
+.about-media-title {
+  margin-bottom: 1.2rem;  /* more space below the header */
+  color: #f4f6fa;
+  font-size: 1.4rem;
+  
+  
+}
+
+/* Carousel core container */
+.about-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: transparent;
+  width: 100%;
+  max-width: 950px;      /* Controls max size of images/cards */
+  margin: 0 auto;
+}
+
+/* Slides: stacked & fade */
+.about-carousel .about-slide {
+  opacity: 0;
+  transition: opacity 0.55s ease-in-out;
+  position: absolute;
+  inset: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.about-carousel .about-slide.is-active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Image: responsive 16:9 with object-fit cover */
+.about-carousel .about-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 9px;
+  display: block;
+  box-shadow: 0 8px 22px rgba(2,6,23,0.45);
+  max-height: 450px;          /* Set the max height you like for desktop */
+  background: #101929;
+}
+
+/* Caption sits below image (space reserved so dots won't overlap) */
+.about-carousel .about-slide figcaption {
+  margin: 0.55rem 0 0;
+  padding-left: 0.25rem;
+  color: var(--ink-muted, #b2bbc8);
+  font-size: 0.97rem;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Arrows - namespaced */
+.about-carousel .about-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 999px;
+  background: rgba(11,17,32,0.69);
+  color: #eaf0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 40;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.5);
+  transition: transform .14s ease, background .18s ease;
+}
+.about-carousel .about-carousel-arrow.left { left: 10px; }
+.about-carousel .about-carousel-arrow.right { right: 10px; }
+.about-carousel .about-carousel-arrow:hover { transform: translateY(-50%) scale(1.09); background: rgba(59,130,246,0.22); }
+
+/* Dots container positioned below caption so they don't clash */
+.about-carousel-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 9px;
+  padding-bottom: 6px;
+  z-index: 30;
+  position: relative;
+}
+
+/* Dot style */
+.about-carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(148,163,184,0.34);
+  border: 1px solid rgba(148,163,184,0.12);
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+}
+.about-carousel-dot.is-active {
+  background: rgba(99,102,241,0.95);
+  transform: scale(1.24);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1100px) {
+  .about-media-card,
+  .about-carousel { max-width: 99vw; }
+  .about-carousel .about-slide img { max-height: 300px; }
+}
+@media (max-width: 800px) {
+  .about-media-card { padding: 0.75rem 0.6rem 0.8rem 0.6rem; }
+  .about-carousel { max-width: 100vw; }
+  .about-carousel .about-slide img { max-height: 175px; }
+}
+@media (max-width: 540px) {
+  .about-media-card { padding: 0.45rem 0.15rem 0.55rem 0.15rem; }
+  .about-carousel .about-slide img { max-height: 110px; }
+}
+
+
+
+/* === Patent Section Layout Fix === */
+
+.djs-patent-docs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  margin-top: 1.4rem;
+  width: 100%;
+}
+
+.djs-patent-doc {
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.djs-patent-doc:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99,102,241,0.35);
+}
+
+/* A4 badge */
+.a4-badge {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.75rem;
+  padding: 3px 9px;
+  background: rgba(75,85,255,0.25);
+  color: #fff;
+  border-radius: 999px;
+}
+
+/* A4 preview image */
+.djs-patent-doc img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.414; /* true A4 ratio */
+  object-fit: cover;
+  border-radius: 8px;
+  
+  background: rgba(255,255,255,0.03);
+}
+
+/* Caption */
+.patent-caption {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e6e9f5;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .djs-patent-docs {
+    grid-template-columns: 1fr;
+  }
 }

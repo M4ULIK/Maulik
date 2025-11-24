@@ -4,184 +4,443 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DJS Miles – Shell Eco-Marathon | Maulik</title>
+
+  <!-- shared styles / fonts / scripts -->
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <script defer src="../assets/js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="../assets/js/script.js"></script>
 </head>
 <body>
+  <!-- global background -->
+  <div class="bg-grid"></div>
+
   <!-- shared header -->
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <a href="../index.html" class="logo">Maulik</a>
+      <a href="../index.html" class="logo">Maulik Rakesh Rajput</a>
+
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="../index.html#hero">Home</a></li>
-        <li><a href="../projects.html" class="active">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#timeline">Journey</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
+    <div class="scroll-progress"></div>
   </header>
 
   <main class="proj-docs-page">
-    <div class="proj-docs-shell">
+    <div class="proj-docs-shell" data-reveal>
       <!-- LEFT NAV -->
-      <aside class="proj-docs-nav">
-        <div class="proj-docs-title">DJS Miles – Shell Eco-Marathon</div>
+      <aside class="proj-docs-nav" data-reveal>
+        <div class="proj-docs-title">
+          DJS Miles – Shell Eco-Marathon
+        </div>
+
         <nav>
-          <a href="#overview" class="proj-docs-link">Overview</a>
-          <a href="#background" class="proj-docs-link">Background</a>
-          <a href="#role" class="proj-docs-link">My Role</a>
-          <a href="#vehicle" class="proj-docs-link">Vehicle & Structure</a>
-          <a href="#steering" class="proj-docs-link">Steering & Packaging</a>
-          <a href="#tools" class="proj-docs-link">Tools & Tech</a>
-          <a href="#results" class="proj-docs-link">Results & Awards</a>
-          <a href="#media" class="proj-docs-link">Media & Downloads</a>
+          <a href="#overview"     class="proj-docs-link">Overview</a>
+          <a href="#problem"      class="proj-docs-link">Problem Statement</a>
+          <a href="#role"         class="proj-docs-link">My Role</a>
+          <a href="#approach"     class="proj-docs-link">Approach</a>
+          <a href="#subprojects"  class="proj-docs-link">Subprojects</a>
+          <a href="#achievements" class="proj-docs-link">Achievements</a>
+          <a href="#tools"        class="proj-docs-link">Tools &amp; Tech</a>
+          <a href="#learnings"    class="proj-docs-link">Learnings &amp; Impact</a>
         </nav>
+
         <div class="proj-docs-meta">
           <p><strong>Team:</strong> DJS Miles</p>
-          <p><strong>Event:</strong> Shell Eco-Marathon (Electric)</p>
-          <p><strong>Focus:</strong> Ultra-efficient 3-wheeler EV</p>
+          <p><strong>Event:</strong> Shell Eco-Marathon APME</p>
+          <p><strong>Focus:</strong> Electric Supermileage Vehicle</p>
+          <p><strong>Role:</strong> Co-founder · VD &amp; Structures</p>
         </div>
       </aside>
 
       <!-- RIGHT CONTENT -->
       <section class="proj-docs-content">
-        <!-- MAIN HEADING -->
-        <article id="overview" class="proj-docs-section">
-          <h1>DJS Miles – Shell Eco-Marathon</h1>
+
+        <!-- HERO TITLE CARD -->
+        <article id="heading" class="proj-docs-section proj-docs-section--hero" data-reveal>
+          <h1>
+            DJS Miles – Shell Eco-Marathon<br />
+            <span class="proj-docs-subtitle">Electric Supermileage Vehicle · India</span>
+          </h1>
           <p class="proj-docs-lead">
-            Co-founded and led an electric supermileage team to design a highly efficient 3-wheeled EV for Shell Eco-Marathon, focusing on
-            <strong>lightweight composite monocoque construction</strong>, low-drag body design, and reliable steering for tight urban-style tracks.
+            Co-founded and later led <span class="keyword">DJS Miles</span>, the official
+            electric supermileage team of Dwarkadas J. Sanghvi College of Engineering, with
+            the vision to design and manufacture India’s first student-built ultra-efficient
+            electric vehicle for <strong>Shell Eco-Marathon</strong>.
           </p>
-          <p class="proj-docs-lead">
-            The team secured multiple off-track awards thanks to strong engineering documentation and innovation.
-          </p>
+          <ul class="proj-docs-tags">
+            <li>Electric Supermileage Vehicle</li>
+            <li>Carbon Fiber Monocoque</li>
+            <li>Steering &amp; Upright Design</li>
+          </ul>
         </article>
 
-        <!-- VISUAL STRIP -->
-        <div class="proj-docs-visual">
-          <div class="proj-docs-visual-main">
-            <h2>Vehicle / Monocoque visuals</h2>
-            <p>Use for teardrop body render, chassis CAD, or manufacturing images.</p>
-            <div class="proj-docs-visual-placeholder">ECO-MARATHON VEHICLE IMAGE</div>
-          </div>
-          <div class="proj-docs-visual-side">
-            <div class="proj-docs-visual-card">
-              <h3>Track / testing video</h3>
-              <p>Vehicle rollout, steering test, or event footage.</p>
-              <div class="proj-docs-visual-sm">VIDEO PLACEHOLDER</div>
-            </div>
-            <div class="proj-docs-visual-card">
-              <h3>Key documents</h3>
-              <ul>
-                <li><a href="#">Design report</a></li>
-                <li><a href="#">Composite layup</a></li>
-                <li><a href="#">Event submission docs</a></li>
-              </ul>
-            </div>
-          </div>
+        <!-- SIMPLE HERO MEDIA / CAROUSEL -->
+        <div class="proj-carousel" data-reveal>
+          <figure class="proj-slide is-active">
+            <img src="../assets/img/miles 1.png" alt="DJS Miles electric supermileage vehicle render or track image">
+            <figcaption>Adamya - Our Supermileage EV for the Season 2021.</figcaption>
+          </figure>
+
+          <figure class="proj-slide">
+            <img src="../assets/img/miles 2.png" alt="Carbon fiber monocoque CAD / manufacturing">
+            <figcaption>Efficiere - Our Supermileage EV for the Season 2022.</figcaption>
+          </figure>
+
+          <figure class="proj-slide">
+            <img src="../assets/img/miles 3.jpeg" alt="Steering / upright and packaging">
+            <figcaption>Three-wheel steering layout and 3D-printed carbon fiber upright.</figcaption>
+          </figure>
+
+          <div class="proj-carousel-arrow left" data-dir="prev">❮</div>
+          <div class="proj-carousel-arrow right" data-dir="next">❯</div>
+          <div class="proj-carousel-dots"></div>
         </div>
 
-        <!-- Background -->
-        <article id="background" class="proj-docs-section">
-          <h2>Background</h2>
-          <p>
-            Shell Eco-Marathon challenges student teams to design and build ultra energy-efficient vehicles.
-            Our goal was to create an <strong>electric, 3-wheeled, teardrop-shaped composite vehicle</strong> with minimal drag and mass,
-            while still being manufacturable with the resources available to a student team.
+        <!-- ===== 1. OVERVIEW / CONTEXT ===== -->
+        <article id="overview" class="proj-docs-section" data-reveal>
+          <h2>Overview / Context</h2>
+          <p class="proj-docs-text">
+            <span class="keyword">DJS Miles</span> is the official
+            <span class="keyword">Electric Supermileage Vehicle</span> team of Dwarkadas
+            J. Sanghvi College of Engineering, founded during the pandemic with the goal of
+            building India’s first student-developed ultra-efficient electric vehicle.
           </p>
-          <p>
-            The project demanded concurrent work on aerodynamics, lightweight structure, driveline packaging, and steering kinematics,
-            with strong emphasis on documentation for the competition.
-          </p>
-        </article>
-
-        <!-- My Role -->
-        <article id="role" class="proj-docs-section">
-          <h2>My Role</h2>
-          <ul>
-            <li>Co-founded and led the DJS Miles team.</li>
-            <li>Drove the overall mechanical concept: 3-wheeled EV with composite monocoque.</li>
-            <li>Designed the outer body and structural shell for minimum drag and weight.</li>
-            <li>Coordinated manufacturing and integration for the competition vehicle.</li>
-            <li>Prepared technical documentation for off-track awards.</li>
-          </ul>
-        </article>
-
-        <!-- Vehicle & structure -->
-        <article id="vehicle" class="proj-docs-section">
-          <h2>Vehicle & Structural Design</h2>
-          <p>
-            The vehicle used a <strong>teardrop-shaped carbon fiber monocoque</strong> to achieve low frontal area and smooth flow.
-            The composite shell acted as both the aerodynamic surface and the primary structure, reducing part count and weight.
-          </p>
-          <ul>
-            <li>3-wheeled layout for reduced rolling resistance.</li>
-            <li>Carbon fiber / composite monocoque for stiffness-to-weight.</li>
-            <li>Body optimized for smooth airflow over canopy and tail.</li>
-          </ul>
-        </article>
-
-        <!-- Steering & packaging -->
-        <article id="steering" class="proj-docs-section">
-          <h2>Steering, Driver, and EV Packaging</h2>
-          <p>
-            Because of the narrow, aerodynamic body, integrating steering, driver ergonomics, and the EV powertrain in a limited space was a key challenge.
-          </p>
-          <ul>
-            <li>Steering system designed to fit the narrow nose profile.</li>
-            <li>Driver position optimized for visibility and low CdA.</li>
-            <li>Battery and motor packaging arranged for serviceability and mass centralization.</li>
-          </ul>
-          <p>
-            The final layout balanced manufacturability with competition requirements.
+          <p class="proj-docs-text">
+            The team competed in the <span class="keyword">Shell Eco-Marathon Asia Pacific &amp;
+            Middle East (APME)</span> region for two consecutive seasons (2020–2021, 2021–2022),
+            representing India among <span class="keyword">250+ international teams</span>.
           </p>
         </article>
 
-        <!-- Tools -->
-        <article id="tools" class="proj-docs-section">
-          <h2>Tools & Technologies</h2>
-          <ul>
-            <li>Fusion 360 / SolidWorks – CAD modelling of body, chassis, and steering.</li>
-            <li>ANSYS – structural checks on composite shell.</li>
-            <li>Excel / documentation – competition reports and design justification.</li>
-          </ul>
+        <!-- ===== 2. PROBLEM STATEMENT ===== -->
+        <article id="problem" class="proj-docs-section" data-reveal>
+          <h2>Problem Statement</h2>
+          <p class="proj-docs-text">
+            The key challenge was to conceptualize and develop an electric vehicle optimised for
+            <span class="keyword">maximum energy efficiency</span>, while remaining manufacturable
+            by a student team.
+          </p>
+          <p class="proj-docs-text">
+            Engineering focus areas included an aerodynamic <span class="keyword">teardrop carbon
+            fiber monocoque</span>, lightweight structural design, highly efficient
+            <span class="keyword">three-wheeled steering layout</span>, and tight packaging of the
+            EV drivetrain in a minimal envelope.
+          </p>
         </article>
 
-        <!-- Results -->
-        <article id="results" class="proj-docs-section">
-          <h2>Results & Awards</h2>
-          <ul>
-            <li>Successfully built and presented an electric supermileage vehicle for Shell Eco-Marathon.</li>
-            <li>Secured multiple off-track awards due to strong engineering documentation and innovation.</li>
-            <li>Demonstrated a manufacturable composite monocoque for student teams.</li>
-            <li>Set up a foundation for future iterations of the vehicle.</li>
-          </ul>
-        </article>
-
-        <!-- Media -->
-        <article id="media" class="proj-docs-section">
-          <h2>Media & Downloads</h2>
-          <div class="proj-docs-media-grid">
-            <div class="proj-docs-media-box">
-              <h3>Vehicle photos</h3>
-              <div class="proj-docs-media-placeholder">VEHICLE PHOTO</div>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Reports</h3>
-              <ul>
-                <li><a href="#">Design report (PDF)</a></li>
-                <li><a href="#">Manufacturing notes</a></li>
-                <li><a href="#">Event documentation</a></li>
+        <!-- ===== 3. MY ROLE & RESPONSIBILITIES ===== -->
+        <article id="role" class="proj-docs-section" data-reveal>
+          <h2>My Role &amp; Responsibilities</h2>
+          <ul class="proj-docs-list">
+            <li>
+              <span class="keyword">Co-founded</span> the team and later led a
+              <span class="keyword">25-member interdisciplinary group</span> through the
+              2021–2022 season.
+            </li>
+            <li>
+              Worked as <span class="keyword">Vehicle Dynamics &amp; Structural Engineer</span>,
+              responsible for:
+              <ul class="proj-docs-list nested">
+                <li>
+                  <strong>Vehicle Dynamics:</strong> designed and optimised steering geometry
+                  and upright assembly for a three-wheeled electric prototype to achieve
+                  maximum stability, minimum scrub radius, and precise Ackermann geometry.
+                </li>
+                <li>
+                  <strong>Structural Engineering:</strong> designed and manufactured the
+                  teardrop <span class="keyword">carbon fiber sandwich composite monocoque</span>,
+                  ensuring stiffness, low mass, and manufacturability via vacuum bagging.
+                </li>
               </ul>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Videos</h3>
-              <p>Testing / event clips / team intro.</p>
-            </div>
-          </div>
+            </li>
+            <li>
+              Led <span class="keyword">off-track and static competitions</span> such as Vehicle
+              Design, Future Rider, and Pitch the Future, focusing on innovation and sustainability.
+            </li>
+            <li>
+              Managed <span class="keyword">sponsorship and technical communication</span> with
+              universities and industry partners in India and the USA.
+            </li>
+          </ul>
         </article>
 
-        <article class="proj-docs-section">
+        <!-- ===== 4. APPROACH ===== -->
+        <article id="approach" class="proj-docs-section" data-reveal>
+          <h2>Approach</h2>
+          <ul class="proj-docs-list">
+            <li>
+              Adopted a <span class="keyword">simulation-driven design</span> process:
+              vehicle modelling, CAD, analysis, fabrication, and test-based validation.
+            </li>
+            <li>
+              Integrated <span class="keyword">composite manufacturing</span>,
+              <span class="keyword">additive manufacturing</span>, and
+              <span class="keyword">topology optimisation</span> to reduce weight while
+              maintaining structural integrity.
+            </li>
+            <li>
+              Performed iterative <span class="keyword">CFD</span> and
+              <span class="keyword">FEA</span> to refine aerodynamic performance and component
+              strength.
+            </li>
+            <li>
+              Organised material panel tests and full-vehicle efficiency trials to verify
+              performance against Shell Eco-Marathon targets.
+            </li>
+          </ul>
+        </article>
+
+        <!-- ===== 7. SUBPROJECTS (3 CARDS) ===== -->
+        <section id="subprojects" class="proj-docs-section proj-subprojects" data-reveal>
+          <header class="proj-subprojects-header">
+            <h2>Subprojects</h2>
+            <p>
+              Focused design and validation work across
+              <span class="keyword">monocoque</span>, <span class="keyword">steering</span> and
+              <span class="keyword">off-track innovation</span> streams.
+            </p>
+          </header>
+
+          <div class="proj-subprojects-grid proj-subprojects-grid--djs">
+            <!-- 1️⃣ Monocoque -->
+            <article class="proj-subcard">
+              <div class="proj-subcard-header">
+                <span class="proj-subcard-badge">1</span>
+                <h3>Carbon Fiber Monocoque</h3>
+              </div>
+              <p class="proj-subcard-tagline">
+                Bachelor’s thesis–linked monocoque design for a three-wheeled EV, optimised for drag and mass.
+              </p>
+              <ul class="proj-subcard-list">
+                <li>Teardrop chassis in <span class="keyword">Fusion 360</span> for aero performance and tight packaging.</li>
+                <li>Composite layup analysis in <span class="keyword">ANSYS ACP</span> with tuned skins and core.</li>
+                <li>CFD in <span class="keyword">ANSYS Fluent</span>, achieving <span class="keyword">Cd = 0.035</span>.</li>
+                <li>Fabricated via <span class="keyword">vacuum bagging</span>, cutting chassis weight by ~16%.</li>
+              </ul>
+              <div class="proj-subcard-tools">
+                <span>Fusion 360</span><span>ANSYS ACP</span><span>Fluent</span><span>MATLAB</span>
+              </div>
+                            <!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/miles project 1.png" alt="Roll hoops CAD / fabrication" />
+</div>
+              <details class="proj-subcard-more">
+                <summary>More information</summary>
+                <p>
+                  Established a repeatable composite workflow and secured a
+                  <span class="keyword">design registration patent</span> for the monocoque chassis.
+                </p>
+              </details>
+            </article>
+
+            <!-- 2️⃣ Steering & Uprights -->
+            <article class="proj-subcard">
+              <div class="proj-subcard-header">
+                <span class="proj-subcard-badge">2</span>
+                <h3>Steering System &amp; Upright Design</h3>
+              </div>
+              <p class="proj-subcard-tagline">
+                Lightweight steering with 3D-printed carbon fiber uprights for a suspension-less three-wheel layout.
+              </p>
+              <ul class="proj-subcard-list">
+                <li>Steering geometry modelled in <span class="keyword">MATLAB</span> (Ackermann, turning radius, loads).</li>
+                <li>Custom linkage &amp; uprights in <span class="keyword">SolidWorks</span>.</li>
+                <li>FEA in <span class="keyword">ANSYS</span> and validation in <span class="keyword">Simscale / LOTUS</span>.</li>
+                <li>Topology optimisation in <span class="keyword">Altair Inspire</span>; uprights 3D-printed in CF-reinforced polymer.</li>
+              </ul>
+              <div class="proj-subcard-tools">
+                <span>SolidWorks</span><span>MATLAB</span><span>ANSYS</span><span>Altair</span>
+              </div>
+              <!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/miles project 2.png" alt="Roll hoops CAD / fabrication" />
+</div>
+              <details class="proj-subcard-more">
+                <summary>More information</summary>
+                <p>
+                  Achieved an <span class="keyword">88% reduction in upright mass</span> vs aluminium,
+                  and filed a <span class="keyword">design registration patent</span> for the upright assembly.
+                </p>
+              </details>
+            </article>
+
+            <!-- 3️⃣ Off-track & Innovation -->
+            <article class="proj-subcard">
+              <div class="proj-subcard-header">
+                <span class="proj-subcard-badge">3</span>
+                <h3>Off-Track Competitions &amp; Innovation</h3>
+              </div>
+              <p class="proj-subcard-tagline">
+                Communicating the engineering story across Shell’s global innovation and design challenges.
+              </p>
+              <ul class="proj-subcard-list">
+                <li>Co-authored reports for <span class="keyword">Vehicle Design</span>, <span class="keyword">Pitch the Future</span>, and <span class="keyword">Future Rider</span>.</li>
+                <li>Showcased composite, lightweight and additive-manufacturing concepts.</li>
+                <li>Developed multimedia presentations and sponsor-facing content.</li>
+              </ul>
+              <div class="proj-subcard-tools">
+                <span>Adobe Suite</span><span>Presentation</span><span>Video</span>
+              </div>
+              <!-- new: 4:3 image -->
+<div class="proj-subcard-thumb">
+  <img src="../assets/img/miles project 3.png" alt="Roll hoops CAD / fabrication" />
+</div>
+              <details class="proj-subcard-more">
+                <summary>More information</summary>
+                <p>
+                  Helped secure top regional and global placements, significantly raising the team’s visibility with
+                  <span class="keyword">Shell</span>, <span class="keyword">Adobe</span>, <span class="keyword">Nissan</span>, and others.
+                </p>
+              </details>
+            </article>
+          </div>
+        </section>
+
+<!-- ===== 8. ACHIEVEMENTS & RECOGNITION ===== -->
+<article id="achievements" class="proj-docs-section proj-docs-section--highlight" data-reveal>
+  <h2>Achievements &amp; Recognition</h2>
+
+  <p class="proj-docs-text">
+    DJS Miles earned multiple <span class="keyword">global and regional awards</span> at
+    Shell Eco-Marathon APME and secured <span class="keyword">two design registration patents</span>
+    for lightweight composite structures.
+  </p>
+
+  <!-- Award Cards -->
+  <div class="fs-results-grid djs-awards-grid">
+
+    <!-- Vehicle Design Award -->
+    <a href="https://www.shellecomarathon.com/about/previous-seasons/2021-programme/virtual-programme-2021/virtual-off-track-awards/asia-pacific-middle-east.html" class="fs-result-card award-click">
+      <div class="fs-result-img">
+        <div class="proj-subcard-thumb">
+  <img src="../assets/img/miles achievement 1.png" alt="Roll hoops CAD / fabrication" />
+</div>
+      </div>
+      <div class="fs-result-body">
+        <div class="fs-result-badge gold">🥇</div>
+        <h3>Vehicle Design Award</h3>
+        <p>
+          <strong>1st Place – Vehicle Design Award (APME)</strong><br>
+          Recognised for holistic engineering design, documentation, and manufacturability.
+        </p>
+      </div>
+    </a>
+
+    <!-- Adobe Digital Literacy -->
+    <a href="https://www.shellecomarathon.com/about/previous-seasons/2021-programme/virtual-programme-2021/pitch-the-future/about/_jcr_content/root/main/section/simple_copy_copy_cop/link_list_copy_copy/links/item0.stream/1676977411590/7d8ce2a4dc72fed45694e3b2e7e855155d3907db/pitch-the-future-full-results-for-website.pdf" class="fs-result-card award-click">
+      <div class="fs-result-img">
+        <div class="proj-subcard-thumb">
+  <img src="../assets/img/miles achievement 2.png" alt="Roll hoops CAD / fabrication" />
+</div>
+      </div>
+      <div class="fs-result-body">
+        <div class="fs-result-badge gold">🥇</div>
+        <h3>Adobe Digital Literacy Award</h3>
+        <p>
+          <strong>1st Place – Adobe Digital Literacy Award (Global)</strong><br>
+          For digital storytelling, visual communication, and outreach around the project.
+        </p>
+      </div>
+    </a>
+
+    <!-- Future Rider Challenge -->
+    <a href="https://www.shellecomarathon.com/about/previous-seasons/2022-programme/virtual/future-rider/djs-miles.html" class="fs-result-card award-click">
+      <div class="fs-result-img">
+        <div class="proj-subcard-thumb">
+  <img src="../assets/img/miles achievement 3.png" alt="Roll hoops CAD / fabrication" />
+</div>
+      </div>
+      <div class="fs-result-body">
+        <div class="fs-result-badge silver">🥈</div>
+        <h3>Future Rider Challenge</h3>
+        <p>
+          <strong>2nd Place – Future Rider Challenge (APME)</strong><br>
+          For user-centred future mobility concepts built around the DJS Miles platform.
+        </p>
+      </div>
+    </a>
+
+    <!-- Pitch the Future -->
+    <a href="https://www.shellecomarathon.com/about/previous-seasons/2021-programme/virtual-programme-2021/pitch-the-future/about/_jcr_content/root/main/section/simple_copy_copy_cop/link_list_copy_copy/links/item0.stream/1676977411590/7d8ce2a4dc72fed45694e3b2e7e855155d3907db/pitch-the-future-full-results-for-website.pdf" class="fs-result-card award-click">
+      <div class="fs-result-img">
+        <div class="proj-subcard-thumb">
+  <img src="../assets/img/miles achievement 4.png" alt="Roll hoops CAD / fabrication" />
+</div>
+      </div>
+      <div class="fs-result-body">
+        <div class="fs-result-badge bronze">🥉</div>
+        <h3>Pitch the Future</h3>
+        <p>
+          <strong>3rd Place – Pitch the Future (APME)</strong><br>
+          For innovation and sustainability-driven technical + business proposal.
+        </p>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Patents -->
+<div class="djs-patent-block">
+  <h3>Design Registration Patents</h3>
+  <p class="proj-docs-text">
+    Two <span class="keyword">design registration patents</span> were filed for the
+    <span class="keyword">carbon fiber monocoque chassis</span> and the
+    <span class="keyword">3D-printed carbon fiber upright</span>, recognising the originality,
+    manufacturability, and lightweight design.
+  </p>
+
+  <div class="djs-patent-docs">
+    
+    <!-- Patent 1 -->
+    <a href="../assets/docs/monocoque patent.pdf" target="_blank" class="djs-patent-doc">
+     
+      <img src="../assets/img/mono patent.png" alt="Monocoque Patent Certificate" />
+      
+    </a>
+
+    <!-- Patent 2 -->
+    <a href="../assets/docs/upright patent.pdf" target="_blank" class="djs-patent-doc">
+      
+      <img src="../assets/img/upright patent.png" alt="Upright Patent Certificate" />
+    
+    </a>
+
+  </div>
+</div>
+
+
+</article>
+
+
+        <!-- ===== 6. TOOLS & TECHNOLOGIES ===== -->
+        <article id="tools" class="proj-docs-section" data-reveal>
+          <h2>Tools &amp; Technologies</h2>
+          <p class="proj-docs-text">
+            Fusion 360 · SolidWorks · ANSYS Mechanical · ANSYS ACP ·
+            ANSYS Fluent (CFD) · Altair Inspire · MATLAB · Simscale · LOTUS ·
+            FDM 3D Printing · Vacuum Bagging
+          </p>
+        </article>
+
+        <!-- ===== 7. LEARNINGS & IMPACT ===== -->
+        <article id="learnings" class="proj-docs-section" data-reveal>
+          <h2>Learnings &amp; Impact</h2>
+          <ul class="proj-docs-list">
+            <li>Built strong expertise in <span class="keyword">aero-structural optimisation</span> and ultra-efficient EV design.</li>
+            <li>Learned to connect <span class="keyword">simulation, manufacturing, and testing</span> in a resource-constrained student setting.</li>
+            <li>Strengthened <span class="keyword">leadership, communication, and sponsorship</span> skills through global competition exposure.</li>
+          </ul>
+        </article>
+
+        <!-- BACK LINK -->
+        <article class="proj-docs-section proj-docs-back-wrap" data-reveal>
           <a href="../projects.html" class="proj-docs-back">← Back to all projects</a>
         </article>
       </section>
@@ -191,5 +450,8 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Maulik. All rights reserved.</p>
   </footer>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 </body>
 </html>

@@ -4,40 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teaching Assistant & Lab Instructor – Chalmers University | Maulik</title>
+
+  <!-- shared styles / fonts / scripts (same as index + projects) -->
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <script defer src="../assets/js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="../assets/js/script.js"></script>
 </head>
 <body>
+  <!-- global background -->
+  <div class="bg-grid"></div>
+
   <!-- shared header -->
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <a href="../index.html" class="logo">Maulik</a>
+      <a href="../index.html" class="logo">Maulik Rakesh Rajput</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="../index.html#hero">Home</a></li>
-        <li><a href="../projects.html" class="active">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#timeline">Journey</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
+    <div class="scroll-progress"></div>
   </header>
 
   <main class="proj-docs-page">
-    <div class="proj-docs-shell">
+    <div class="proj-docs-shell" data-reveal>
       <!-- LEFT NAV -->
-      <aside class="proj-docs-nav">
-        <div class="proj-docs-title">Teaching Assistant & Lab Instructor – Chalmers</div>
-        <nav>
-          <a href="#overview" class="proj-docs-link">Overview</a>
-          <a href="#courses" class="proj-docs-link">Courses</a>
-          <a href="#lab" class="proj-docs-link">Lab Setup</a>
-          <a href="#responsibilities" class="proj-docs-link">Responsibilities</a>
-          <a href="#tools" class="proj-docs-link">Tools & Software</a>
-          <a href="#impact" class="proj-docs-link">Impact</a>
-          <a href="#media" class="proj-docs-link">Media & Downloads</a>
-        </nav>
+      <aside class="proj-docs-nav" data-reveal>
+        <div class="proj-docs-title">
+          Teaching Assistant &amp; Lab Instructor – Chalmers
+        </div>
+<nav>
+  <a href="#overview"         class="proj-docs-link">Overview</a>
+  <a href="#background"       class="proj-docs-link">Problem Statement</a>
+  <a href="#responsibilities" class="proj-docs-link">My Responsibilities</a>
+  <a href="#approach"         class="proj-docs-link">Approach / Process</a>
+  <a href="#results"          class="proj-docs-link">Results &amp; Outcomes</a>
+  <a href="#tools"            class="proj-docs-link">Tools &amp; Technologies</a>
+  <a href="#impact"           class="proj-docs-link">Impact &amp; Learnings</a>
+
+</nav>
+
         <div class="proj-docs-meta">
           <p><strong>University:</strong> Chalmers University of Technology</p>
-          <p><strong>Focus:</strong> Vehicle Dynamics & Aerodynamics labs</p>
+          <p><strong>Focus:</strong> Vehicle Dynamics &amp; Aerodynamics labs</p>
           <p><strong>Facility:</strong> CASTER full-scale driving simulator</p>
           <p><strong>Role:</strong> TA / Lab Instructor</p>
         </div>
@@ -45,127 +58,183 @@
 
       <!-- RIGHT CONTENT -->
       <section class="proj-docs-content">
-        <!-- MAIN HEADING -->
-        <article id="overview" class="proj-docs-section">
-          <h1>Teaching Assistant & Lab Instructor – Chalmers University</h1>
+        <!-- HERO TITLE CARD -->
+        <article id="heading" class="proj-docs-section proj-docs-section--hero" data-reveal>
+          <h1>
+            Teaching Assistant &amp; Lab Instructor<br />
+            <span class="proj-docs-subtitle">Chalmers University · CASTER Simulator Labs</span>
+          </h1>
           <p class="proj-docs-lead">
-            Assisted in delivering master’s-level courses in vehicle dynamics and road vehicle aerodynamics, supporting simulator-based labs using the
+            Assisted in delivering master’s-level courses in vehicle dynamics and road vehicle aerodynamics,
+            supporting simulator-based labs using the
             <strong>CASTER full-scale driving simulator</strong> and MATLAB/Simulink-based exercises.
           </p>
           <p class="proj-docs-lead">
-            The work involved guiding students through modelling, parameter tuning, and validation tasks so that they could link classroom theory with real vehicle behavior.
+            Helped students bridge the gap between theory and practice by guiding them through modelling,
+            parameter tuning, experiments, and result interpretation.
           </p>
-        </article>
-
-        <!-- VISUAL STRIP -->
-        <div class="proj-docs-visual">
-          <div class="proj-docs-visual-main">
-            <h2>CASTER / lab environment</h2>
-            <p>Use this for a photo of the driving simulator or lab workstation setup.</p>
-            <div class="proj-docs-visual-placeholder">SIMULATOR / LAB IMAGE</div>
-          </div>
-          <div class="proj-docs-visual-side">
-            <div class="proj-docs-visual-card">
-              <h3>Demo / walkthrough</h3>
-              <p>Short clip of the simulator session or student exercise.</p>
-              <div class="proj-docs-visual-sm">LAB VIDEO PLACEHOLDER</div>
-            </div>
-            <div class="proj-docs-visual-card">
-              <h3>Lab material</h3>
-              <ul>
-                <li><a href="#">Lab instructions (PDF)</a></li>
-                <li><a href="#">MATLAB/Simulink files</a></li>
-                <li><a href="#">Assessment rubric</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Courses -->
-        <article id="courses" class="proj-docs-section">
-          <h2>Courses Supported</h2>
-          <ul>
-            <li><strong>Vehicle Motion Engineering</strong> – dynamics, stability, and control of road vehicles.</li>
-            <li><strong>Road Vehicle Aerodynamics</strong> – aerodynamic forces, drag reduction, and flow visualization.</li>
-          </ul>
-          <p>
-            Labs were designed to help students connect theoretical vehicle dynamics/aero content to measurable parameters in a controlled environment.
-          </p>
-        </article>
-
-        <!-- Lab setup -->
-        <article id="lab" class="proj-docs-section">
-          <h2>Lab Setup & Teaching Approach</h2>
-          <p>
-            The core of the exercises was the <strong>CASTER full-scale driving simulator</strong>, which allows students to experience vehicle behavior in real time and compare it with model predictions.
-            MATLAB/Simulink models and prepared scenarios were used to demonstrate the effect of vehicle parameters on stability, cornering, and aerodynamic loads.
-          </p>
-          <ul>
-            <li>Prepared simulator scenario and configuration.</li>
-            <li>Guided students through running experiments.</li>
-            <li>Helped them post-process results in MATLAB/Excel.</li>
-            <li>Ensured safety and correct use of the simulator.</li>
+          <ul class="proj-docs-tags">
+            <li>Vehicle Motion Engineering labs</li>
+            <li>Road Vehicle Aerodynamics labs</li>
+            <li>CASTER full-scale simulator</li>
+            <li>MATLAB · Simulink</li>
           </ul>
         </article>
 
-        <!-- Responsibilities -->
-        <article id="responsibilities" class="proj-docs-section">
-          <h2>Responsibilities</h2>
-          <ul>
-            <li>Explained lab objectives and related theory at the start of each session.</li>
-            <li>Helped students implement or modify MATLAB/Simulink models.</li>
-            <li>Troubleshot issues related to simulator setup or signal acquisition.</li>
-            <li>Reviewed student lab reports and clarified evaluation criteria.</li>
-            <li>Provided 1:1 guidance to groups working on vehicle dynamics or aero-related assignments.</li>
-          </ul>
-        </article>
+     
 
-        <!-- Tools -->
-        <article id="tools" class="proj-docs-section">
-          <h2>Tools & Software</h2>
-          <ul>
-            <li><strong>MATLAB & Simulink</strong> – data processing, model-based labs.</li>
-            <li><strong>CASTER driving simulator</strong> – full-scale, used for vehicle motion experiments.</li>
-            <li><strong>Excel</strong> – post-processing and lab report templates.</li>
-            <li><strong>Course LMS / documentation</strong> – distributing assignments and lab material.</li>
-          </ul>
-        </article>
+<!-- ============================
+     1. OVERVIEW / CONTEXT
+     ============================ -->
+<article id="overview" class="proj-docs-section" data-reveal>
+  <h2>Overview </h2>
+  <p class="proj-docs-text">
+    Served as a teaching assistant and lab instructor for 
+    <span class="keyword">Vehicle Motion Engineering (MMF062)</span> 
+    and 
+    <span class="keyword">Road Vehicle Aerodynamics (MTF236)</span>.  
+    Delivered simulator-based sessions with Chalmers’ 
+    <span class="keyword">CASTER full-scale driving simulator</span>, supporting students in
+    applying theoretical models of vehicle dynamics and aerodynamics to hands-on experiments and simulations.
+  </p>
+</article>
 
-        <!-- Impact -->
-        <article id="impact" class="proj-docs-section">
-          <h2>Impact & Learnings</h2>
-          <ul>
-            <li>Improved student understanding of how theoretical models map to real vehicle behavior.</li>
-            <li>Strengthened communication and technical mentoring skills.</li>
-            <li>Gained experience in operating and maintaining a full-scale driving simulator for teaching.</li>
-            <li>Supported course staff in delivering high-quality lab experiences.</li>
-          </ul>
-        </article>
 
-        <!-- Media -->
-        <article id="media" class="proj-docs-section">
-          <h2>Media & Downloads</h2>
-          <div class="proj-docs-media-grid">
-            <div class="proj-docs-media-box">
-              <h3>Lab / simulator photos</h3>
-              <div class="proj-docs-media-placeholder">SIMULATOR IMAGE</div>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Teaching material</h3>
-              <ul>
-                <li><a href="#">Sample lab sheet</a></li>
-                <li><a href="#">Student exercise file</a></li>
-                <li><a href="#">Reference solutions (internal)</a></li>
-              </ul>
-            </div>
-            <div class="proj-docs-media-box">
-              <h3>Notes</h3>
-              <p>Use this for student feedback, session schedule, or course links.</p>
-            </div>
-          </div>
-        </article>
+<!-- ============================
+     2. PROBLEM STATEMENT
+     ============================ -->
+<article id="background" class="proj-docs-section" data-reveal>
+  <h2>Problem Statement</h2>
+  <p class="proj-docs-text">
+    Students were required to validate theoretical models of vehicle motion and aerodynamics through
+    simulation and lab experiments. Key challenges included understanding 
+    <span class="keyword">tire slip behavior</span>, 
+    <span class="keyword">brake bias dynamics</span>, 
+    <span class="keyword">steering response</span>, 
+    <span class="keyword">steady-state cornering</span>, and 
+    <span class="keyword">aerodynamic downforce effects</span>.  
+    Guided support was crucial to help bridge theory and real-world behavior.
+  </p>
+</article>
 
-        <article class="proj-docs-section">
+
+<!-- ============================
+     3. MY ROLE & RESPONSIBILITIES
+     ============================ -->
+<article id="responsibilities" class="proj-docs-section" data-reveal>
+  <h2>My Role & Responsibilities</h2>
+
+  <ul class="proj-docs-list">
+    <li>Facilitated lab sessions using <span class="keyword">MATLAB/Simulink</span> and the <span class="keyword">CASTER simulator</span>.</li>
+
+    <li>Guided students in implementing and validating models for:</li>
+    <ul class="proj-docs-list nested">
+      <li>
+        <span class="keyword">Steering dynamics</span> and 
+        <span class="keyword">longitudinal slip</span> behaviour using the 
+        <span class="keyword">Magic Formula tire model</span> and free-body diagrams.
+      </li>
+      <li>
+        <span class="keyword">Brake bias distribution</span> and its effect on stability under varying axle loads.
+      </li>
+      <li>
+        <span class="keyword">Steady-state cornering</span>, lateral acceleration, and slip angle behaviour.
+      </li>
+    </ul>
+
+    <li>
+      Led aerodynamics labs demonstrating how 
+      <span class="keyword">downforce</span> and 
+      <span class="keyword">aero packages</span> influence cornering stability, maximum lateral acceleration, and handling.
+    </li>
+
+    <li>
+      Supervised data analysis & visualization, ensuring students could compare simulator outputs with 
+      theoretical predictions and simulation plots.
+    </li>
+  </ul>
+</article>
+
+
+<!-- ============================
+     4. APPROACH / PROCESS
+     ============================ -->
+<article id="approach" class="proj-docs-section" data-reveal>
+  <h2>Approach / Process</h2>
+
+  <ul class="proj-docs-list">
+    <li>
+      Linked <span class="keyword">longitudinal</span> and <span class="keyword">lateral dynamics equations</span> 
+      with simulation tasks, allowing students to test their models on the CASTER simulator for practical understanding.
+    </li>
+    <li>
+      Demonstrated how to implement <span class="keyword">slip models</span>, 
+      <span class="keyword">tire force computations</span>, and 
+      <span class="keyword">power consumption analysis</span> in MATLAB.
+    </li>
+    <li>
+      Used CASTER simulator experiments to compare vehicle behaviour 
+      <span class="keyword">with and without aerodynamic aids</span>, 
+      highlighting measurable differences in cornering forces, velocity, and lap time.
+    </li>
+    <li>
+      Encouraged rigorous evaluation by comparing 
+      <span class="keyword">simulated vs theoretical</span> results to help students understand real-world limitations.
+    </li>
+  </ul>
+</article>
+
+
+<!-- ============================
+     5. KEY RESULTS & OUTCOMES
+     ============================ -->
+<article id="results" class="proj-docs-section" data-reveal>
+  <h2>Key Results & Outcomes</h2>
+
+  <ul class="proj-docs-list">
+    <li>Improved student proficiency in validating vehicle models and interpreting simulation data.</li>
+    <li>
+      Enabled students to clearly see how 
+      <span class="keyword">tire dynamics</span>, 
+      <span class="keyword">brake bias</span>, and 
+      <span class="keyword">aerodynamics</span> influence vehicle stability and performance.
+    </li>
+    <li>
+      Contributed to better learning outcomes by making abstract concepts significantly more intuitive and application-oriented.
+    </li>
+  </ul>
+</article>
+
+
+<!-- ============================
+     6. TOOLS & TECHNOLOGIES
+     ============================ -->
+<article id="tools" class="proj-docs-section" data-reveal>
+  <h2>Tools & Technologies</h2>
+  <ul class="proj-docs-list">
+    <li><span class="keyword">MATLAB & Simulink</span></li>
+    <li><span class="keyword">CASTER full-scale driving simulator</span></li>
+    <li><span class="keyword">Magic Formula tire model</span> & slip dynamics</li>
+    <li><span class="keyword">Aerodynamic models</span> (CL, downforce, lateral acceleration)</li>
+  </ul>
+</article>
+
+
+<!-- ============================
+     7. LEARNINGS & IMPACT
+     ============================ -->
+<article id="impact" class="proj-docs-section" data-reveal>
+  <h2>Learnings & Impact</h2>
+  <ul class="proj-docs-list">
+    <li>Reinforced expertise in <span class="keyword">vehicle motion dynamics</span> and <span class="keyword">aerodynamics</span> through teaching.</li>
+    <li>Developed strong communication skills for explaining complex engineering concepts.</li>
+    <li>Helped graduate-level students connect <span class="keyword">theory → simulation → real vehicle behaviour</span>.</li>
+  </ul>
+</article>
+
+
+        <!-- BACK LINK -->
+        <article class="proj-docs-section proj-docs-back-wrap" data-reveal>
           <a href="../projects.html" class="proj-docs-back">← Back to all projects</a>
         </article>
       </section>
@@ -175,5 +244,9 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Maulik. All rights reserved.</p>
   </footer>
+
+  <!-- custom cursor (same as other pages) -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 </body>
 </html>
